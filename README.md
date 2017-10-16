@@ -19,8 +19,10 @@ create .env file
 
 copy this content:
 
-APP_NAME=Laravel\n
+APP_NAME=Laravel
+
 APP_ENV=local
+
 APP_KEY=
 APP_DEBUG=true
 APP_LOG_LEVEL=debug
