@@ -17,7 +17,8 @@ Install composer : `composer install`
 
 create .env file
 
-copy this content:
+
+From the editing view(to preserve format), copy this content:
 
 APP_NAME=Laravel
 APP_ENV=local
