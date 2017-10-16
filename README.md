@@ -20,7 +20,6 @@ create .env file
 copy this content:
 
 APP_NAME=Laravel
-
 APP_ENV=local
 
 APP_KEY=
