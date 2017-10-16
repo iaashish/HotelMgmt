@@ -20,7 +20,7 @@ create .env file
 
 From the editing view(to preserve format), copy this content:
 
-APP_NAME=Laravel<br />
+APP_NAME=Laravel  
 APP_ENV=local<br />
 APP_KEY=<br />
 APP_DEBUG=true<br />
