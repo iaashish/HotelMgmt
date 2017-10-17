@@ -9,15 +9,17 @@ This README would normally document whatever steps are necessary to get your app
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
+Setup Laravel with Xampp, Composer, and Visual Studio Code
+
 git clone <url>
 
+Navigate to directory of project
 
+Install composer from terminal : `composer install`
 
-Install composer : `composer install`
+create .env file in project directory
 
-create .env file
-
-Copy this content
+Copy this content into .env file
 
 APP_NAME=Laravel  
 APP_ENV=local  
@@ -54,7 +56,7 @@ PUSHER_APP_KEY=
 PUSHER_APP_SECRET=  
 
 
-generate and encryption key : `php artisan key:generate`
+generate an encryption key : `php artisan key:generate`
 
 * Summary of set up
 * Configuration
