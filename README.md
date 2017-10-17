@@ -11,6 +11,11 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 Setup Laravel with Xampp, Composer, and Visual Studio Code
 
+This video series helps:
+https://www.youtube.com/watch?v=EU7PRmCpx-0&t=3s
+
+Clone repository:
+
 git clone <url>
 
 Navigate to directory of project
