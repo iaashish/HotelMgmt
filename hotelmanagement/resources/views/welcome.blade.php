@@ -94,8 +94,8 @@ li a:hover {
           <div class="flex-center position-ref full-height" >
          <div class="content">
             <div class="title m-b-md">
-               <a href="/managerlogin">Manager Login</a>
-               <a href="/managerlogin">Staff Login</a>
+               <a href="/managerLogin">Manager Login | </a>
+               <a href="/staffLogin">Staff Login</a>
             </div>
          </div>
       </div>
