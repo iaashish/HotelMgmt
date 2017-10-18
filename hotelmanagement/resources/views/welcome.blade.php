@@ -86,7 +86,7 @@ li a:hover {
             <div class="top-right links">
                <ul>
                <li><a href="/home">Home</a></li>
-               <li><a href="/login">Contact us</a></li>
+               <li><a href="/login">Login</a></li>
                <li><a href="/login">About us</a></li>
                <ul>
             </div>

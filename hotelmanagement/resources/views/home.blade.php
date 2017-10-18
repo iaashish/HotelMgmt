@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in as <strong>USER</strong>
+                    You are logged in as <strong>{{Auth::user()->name}}</strong>
                 </div>
             </div>
         </div>
