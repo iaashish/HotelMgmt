@@ -10,12 +10,12 @@ class GuestsTest extends TestCase {
     // always use DatabaseTransactions when messing with a DB
     use DatabaseTransactions;
     //use DatabaseMigrations;
-
+// use this: ./vendor/bin/phpunit
 /** @test */
 
 function fetches_happiest_guests() {
     //Given
-    factory(Guests::class, 2)->create();
+    factory(Guests::class, 20)->create();
     factory(Guests::class)->create(['happinessLevel' => 95]);
     $mostHappy = factory(Guests::class)->create(['happinessLevel' => 100]); 
     //When

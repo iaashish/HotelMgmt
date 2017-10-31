@@ -22,11 +22,9 @@ class HomeTest extends DuskTestCase
                     ->assertSeeLink('Staff Login')
                     ->assertSeeLink('Admin Login')
                     ->assertSeeLink('HOME')
-                    ->assertSeeLink('REGISTRATION')
-                    ->assertSelected('ABOUT US', 'Brennan Guidry')
-                    ->assertSelected('ABOUT US', 'Ippili Aashish')
-                    ->assertSelected('ABOUT US', 'Oyetokunbo Ipaye')
-                    ->assertSelected('ABOUT US', 'Taghreed Alghamdi');
+                    ->assertSeeLink('REGISTRATION');
+                    
+                    
         });
     }
 }

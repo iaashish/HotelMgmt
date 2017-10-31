@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
 
     function number_of_users () {
-        return $hidden->count; 
+        return User::all()->count; 
     }
 }

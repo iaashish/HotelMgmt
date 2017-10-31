@@ -1,20 +1,47 @@
 <?php
 
 namespace Tests\Unit;
-use App\Article;
+
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\User;
+
 
 class UserTest extends TestCase
 {
-    /** @test  */
-    function check_user_count () {
-        //Given
-        // $db = factory(User::class,4)->create();
-        // factory(User::class)->create(['name' => Pikachu]);
-        //When
-    
-        //Then
-        // $this->assertEquals(5,User::number_of_users());
+
+
+	public function testLoadSampleUsers()
+	{
+
+		$user = factory(User::class, 3)->create(['name' => 'software']);
+
+		$all = User::all();
+
+		$this->assertEquals($all, $all);
+	}
+
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+         $this->assertDatabaseHas('users', [
+        'name' => 'software'
+    ]);
+    }
+
+
+    public function testDeleteUser()
+    {
+        $user = User::where('name', 'software');
+        $user->delete();
+
+        $this->assertDatabaseHas('users', ['name' => 'software']);
+
+
     }
 }
