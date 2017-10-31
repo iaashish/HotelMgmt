@@ -5,7 +5,7 @@ namespace Tests\Browser;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-
+use App\User;
 class RegisterTest extends DuskTestCase
 {
     /**
@@ -26,10 +26,10 @@ class RegisterTest extends DuskTestCase
                     ->assertSee('Register')
                     ->assertPathIs('/register')
                     // our selector with id name, email, pass, etc.
-                    ->value('#name','Joe8')
-                    ->assertInputValue('#name', 'Joe8')
-                    ->value('#email','Joe8@Joe.com')
-                    ->assertInputValue('#email', 'Joe8@Joe.com')
+                    ->value('#name','Joe10')
+                    ->assertInputValue('#name', 'Joe10')
+                    ->value('#email','Joe10@Joe.com')
+                    ->assertInputValue('#email', 'Joe10@Joe.com')
                     ->value('#password', '123456')
                     ->assertInputValue('#password', '123456')
                     ->value('#password-confirm','123456')
@@ -40,6 +40,8 @@ class RegisterTest extends DuskTestCase
                     ->assertPathIs('/home')
                     ->assertTitle('Laravel');
                     //->assertSee("You are logged in!");
+                    $user = User::where('name', 'Joe10');
+                    $user->delete();
         });
     }
 }

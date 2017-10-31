@@ -20,7 +20,9 @@ class ExampleTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertSee('Hotel Management System');
+                    ->assertSee('Hotel Management System')
+                    ->assertSee('We make Life easier');
+                    
         });
     }
 }
