@@ -26,3 +26,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
 
 Route::resource('managers', 'ManagersController');
+Route::get('/managerhome', 'manager\managerController@index');
+Route::post('/registerstaff','staff\staffcontroller@registerStaff');
+
