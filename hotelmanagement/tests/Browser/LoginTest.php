@@ -23,7 +23,8 @@ class LoginTest extends DuskTestCase
         // ]);
 
         $this->browse(function (Browser $browser) {
-            $user = factory(User::class, 1)->create(['name' => 'Joe2'] , ['email' => 'Joe2@Joe.com'] , ['password' => '123456']);
+            $user = factory(User::class, 1)->create(['name' => 'Joe2'] , 
+            ['email' => 'Joe2@Joe.com'] , ['password' => '123456']);
             $browser->visit('/')
                     ->clickLink('Manager Login')
                     ->type('email', 'Joe2@Joe.com')

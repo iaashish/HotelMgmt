@@ -17,6 +17,11 @@ function fetches_happiest_guests() {
     //Given
     factory(Guests::class, 20)->create();
     factory(Guests::class)->create(['happinessLevel' => 95]);
+    factory(Guests::class)->create(['happinessLevel' => 75]);
+    factory(Guests::class)->create(['happinessLevel' => 42]);
+    factory(Guests::class)->create(['happinessLevel' => 87]);
+    factory(Guests::class)->create(['happinessLevel' => 99]);
+    factory(Guests::class)->create(['happinessLevel' => 65]);
     $mostHappy = factory(Guests::class)->create(['happinessLevel' => 100]); 
     //When
     $guests = Guests::happiestGuests();
