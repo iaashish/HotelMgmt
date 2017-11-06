@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Debugbar;
 
 class RedirectIfAuthenticated
 {
@@ -17,10 +18,24 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
-        }
-
-        return $next($request);
+      Debugbar::info($guard);
+    switch ($guard) {
+        case 'admin':
+          if (Auth::guard($guard)->check()) {
+            return redirect('managerhome');
+          }
+          break;
+        case 'staff':
+          if (Auth::guard($guard)->check()) {
+            return redirect('staffhome');
+          }
+          break;
+        default:
+          if (Auth::guard($guard)->check()) {
+              return redirect('/home');
+          }
+          break;
+      }
+      return $next($request);
     }
 }

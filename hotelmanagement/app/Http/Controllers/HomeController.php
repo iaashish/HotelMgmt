@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use Debugbar;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        Debugbar::info("hello");
         $this->middleware('auth');
     }
 
@@ -24,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
+         Debugbar::info("hello");
         return view('home');
     }
 }

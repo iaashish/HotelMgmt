@@ -57,6 +57,10 @@ return [
             'driver' => 'session',
             'provider' => 'staff',
         ],
+        'staff-api' => [
+            'driver' => 'token',
+            'provider' => 'staff',
+        ],
     ],
 
     /*

@@ -81,13 +81,13 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
        
-        <a href="/login"> Manager Login </a>
+        <a href="{{route('login')}}"> Manager Login </a>
        
         <img src="/picture/managr.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">
       <p>
-        <a href="/staffLogin"> Staff Login</a> </p>
+        <a href="/stafflogin"> Staff Login</a> </p>
         <img src="/picture/staff.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">

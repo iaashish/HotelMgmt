@@ -9,9 +9,12 @@ use Illuminate\Foundation\Auth\RedirectsUsers;
 
 class staffcontroller extends Controller
 {
-use RedirectsUsers;
- protected $redirectTo="/managerhome";
+    public function showhomepage()
+    {
 
+      return view('staff\staffhome');
+
+    }
     /**
      * Create a new controller instance.
      *
