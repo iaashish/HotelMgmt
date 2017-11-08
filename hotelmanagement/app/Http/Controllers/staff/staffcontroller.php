@@ -52,6 +52,6 @@ class staffcontroller extends Controller
             'staff_type'=>'accountant',
         ]);
 
-         return redirect($this->redirectPath());
+         return redirect('/managerhome');
     }
 }

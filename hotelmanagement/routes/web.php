@@ -27,6 +27,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
+
+
 Route::get('stafflogin', 'StaffLoginController@showLoginForm');
 
 Route::post('stafflogin', 'StaffLoginController@login');
