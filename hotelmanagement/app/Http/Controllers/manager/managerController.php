@@ -4,7 +4,7 @@ namespace App\Http\Controllers\manager;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Staff as Staff;
 class managerController extends Controller
 {
     //
@@ -16,10 +16,10 @@ class managerController extends Controller
         $this->middleware('auth');
     }
 
-
     public function index()
     {
-        return view('manager.managerhome');
+    	$data = Staff::stafftype();
+        return view('manager.managerhome')->with('data',$data);
     }
 
     
