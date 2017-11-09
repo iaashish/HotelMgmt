@@ -10,14 +10,14 @@ class Booking extends Authenticatable
     use Notifiable;
 
     protected $guard = 'web';
-
+    protected $table = 'booking';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'first','last', 'email', 'checkin', 'checkout'
+        'first','last', 'email', 'checkin', 'checkout','payment'
     ];
 
     /**

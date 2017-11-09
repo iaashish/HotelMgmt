@@ -26,27 +26,31 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <h2><i class=""></i></h2>
     </div>
     <div class="w3-container w3-white w3-padding-16">
-      <form action="/action_page.php" target="_blank">
+      <form method="POST" action="/registerbooking">
+      {{ csrf_field() }}
         <div class="w3-row-padding" style="margin:0 -16px;">
           <div class="w3-half w3-margin-bottom">
             <label><i class="fa fa-calendar-o"></i> Check In</label>
-            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+            <input input id="checkin" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkin" required>
           </div>
           <div class="w3-half">
             <label><i class="fa fa-calendar-o"></i> Check Out</label>
-            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+            <input id="checkout" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkout" required>
           </div>
         </div>
         <div class="w3-row-padding" style="margin:8px -16px;">
           <div class="w3-half w3-margin-bottom">
-            <label><i class="fa fa-male"></i> Full Name</label>
-            <input class="w3-input w3-border" type="text" name="Name">
+            <label>First Name</label>
+            <input id="first" class="w3-input w3-border" type="text" name="first">
+            <label>Last Name</label>
+            <input id="last" class="w3-input w3-border" type="text" name="last">
           </div>
           <div class="w3-half">
             <label><i></i>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email">
+          <input id="email" class="w3-input w3-border" type="text" name="email">
           </div>
         </div>
+        <input type="submit" name="submit">
         <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
       </form>
     </div>
@@ -90,7 +94,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </footer>
 
 <!-- Add Google Maps -->
-<script>
+<!-- <script>
 function myMap()
 {
   myCenter=new google.maps.LatLng(41.878114, -87.629798);
@@ -112,6 +116,6 @@ function myMap()
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
-
+ -->
 </body>
 </html>

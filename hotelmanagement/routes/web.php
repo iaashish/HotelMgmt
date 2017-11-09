@@ -36,8 +36,9 @@ Route::post('stafflogout', 'StaffLoginController@logout');
 Route::get('staffhome',  'staff\staffcontroller@showhomepage');
 
 
-Route::resource('managers', 'ManagersController');
+// Route::resource('managers', 'ManagersController');
 Route::get('/managerhome', 'manager\managerController@index');
 Route::post('/registerstaff','staff\staffcontroller@registerStaff');
 
 Route::get('/booking' , 'BookingController@index');
+Route::post('/registerbooking' , 'BookingController@registerbooking');
