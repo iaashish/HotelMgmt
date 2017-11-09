@@ -40,3 +40,4 @@ Route::resource('managers', 'ManagersController');
 Route::get('/managerhome', 'manager\managerController@index');
 Route::post('/registerstaff','staff\staffcontroller@registerStaff');
 
+Route::get('/booking' , 'BookingController@index');

@@ -12,8 +12,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <body class="w3-light-grey">
 
 <!-- Navigation Bar -->
-<div class="w3-bar w3-white w3-large">
-   <a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+<div class="w3-bar w3-black w3-large">
+   <a href="/" class="w3-bar-item w3-button w3-mobile">Home</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
@@ -22,7 +22,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <header class="w3-display-container w3-content" style="max-width:1500px;">
   <img class="w3-image" src="picture/p5.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
   <div class="w3-display-left w3-padding w3-col l6 m8">
-    <div class="w3-container w3-red">
+    <div class="w3-container w3-black">
       <h2><i class=""></i></h2>
     </div>
     <div class="w3-container w3-white w3-padding-16">
@@ -39,12 +39,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
         </div>
         <div class="w3-row-padding" style="margin:8px -16px;">
           <div class="w3-half w3-margin-bottom">
-            <label><i class="fa fa-male"></i> Adults</label>
-            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+            <label><i class="fa fa-male"></i> Full Name</label>
+            <input class="w3-input w3-border" type="text" name="Name">
           </div>
           <div class="w3-half">
-            <label><i class="fa fa-child"></i> Kids</label>
-          <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+            <label><i></i>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email">
           </div>
         </div>
         <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
@@ -86,7 +86,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
 </footer>
 
 <!-- Add Google Maps -->
