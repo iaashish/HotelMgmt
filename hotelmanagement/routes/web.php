@@ -25,18 +25,16 @@ Auth::routes();
 // 	return view('stafflogin');
 // });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'manager\managerController@index')->name('managerhome');
 Route::get('/admin', 'AdminController@index');
-
-
-Route::get('stafflogin', 'StaffLoginController@showLoginForm');
+Route::get('/stafflogin', 'StaffLoginController@showLoginForm');
 
 Route::post('stafflogin', 'StaffLoginController@login');
 Route::post('stafflogout', 'StaffLoginController@logout');
 Route::get('staffhome',  'staff\staffcontroller@showhomepage');
 
 
-// Route::resource('managers', 'ManagersController');
+Route::resource('managers', 'ManagersController');
 Route::get('/managerhome', 'manager\managerController@index');
 Route::post('/registerstaff','staff\staffcontroller@registerStaff');
 

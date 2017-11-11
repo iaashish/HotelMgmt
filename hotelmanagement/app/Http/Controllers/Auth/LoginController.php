@@ -35,7 +35,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        Debugbar::info("u r in authentication");
+      
         $this->middleware('guest')->except('logout');
     }
 }

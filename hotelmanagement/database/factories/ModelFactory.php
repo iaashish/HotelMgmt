@@ -26,11 +26,20 @@ $factory->define(User::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Guests::class, function (Faker $faker) {
-    
-        return [
-            'name' => $faker->sentence,
-            //can ignore happinessLevel since we defaulted it to 0
-        ];
-    });
+$factory->define(App\Staff::class, function (Faker $faker) {
+    static $password;
+    return [
+        'first' => $faker->firstName,
+        'last' => $faker->lastName,
+        'email' => $faker->unique()->safeEmail,
+        'dob' => $faker->unique()->date,
+        'dateofhire' => $faker->unique()->date,
+        'ssn' => $faker->randomNumber,
+        'address' => $faker->unique()->address,
+        'phonenumber' => $faker->unique()->phoneNumber,
+        'staff_type' => 'Receptionist',
+        'password' => $password ?: $password = bcrypt('123456'),
+        //can ignore happinessLevel since we defaulted it to 0
+    ];
+});
 

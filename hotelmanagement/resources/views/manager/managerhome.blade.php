@@ -46,21 +46,8 @@
 </nav>
 
 <section class="container-fluid" id="section1">
-    <div class="v-center">
-        <h1 class="text-center">Just One Page</h1>
-        <h2 class="text-center lato animate slideInDown">Change It To Say <b>Something</b> Unique</h2>
-        <p class="text-center">
-            <br>
-            <a href="#" class="btn btn-danger btn-lg btn-huge lato" data-toggle="modal" data-target="#myModal">Get Free Membership</a>
-        </p>
-    </div>
-    <a href="#section2">
-        <div class="scroll-down bounceInDown animated">
-            <span>
-                <i class="fa fa-angle-down fa-2x"></i>
-            </span>
-        </div>
-    </a>
+    @include('staff\stafflist')
+
 </section>
 
 <section class="container-fluid" id="section2">
