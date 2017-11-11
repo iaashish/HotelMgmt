@@ -12,3 +12,5 @@ yarn-error.log
 .env
 phpunit.xml
 .idea/workspace.xml
+workspace.xml
+

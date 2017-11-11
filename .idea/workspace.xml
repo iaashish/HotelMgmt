@@ -17,13 +17,97 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hotelmanagement/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="221">
               <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+=======
+            <state relative-caret-position="357">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+>>>>>>> permissions
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <marker date="1510380851189" expanded="true" signature="256:271" ph="{...}" />
+                <marker date="1510380851189" expanded="true" signature="478:491" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="staffcontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+            <state relative-caret-position="-663">
+              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <folding>
+                <element signature="e#46#60#0#PHP" expanded="true" />
+                <marker date="1510380971462" expanded="true" signature="1536:1542" ph="{...}" />
+                <marker date="1510380971462" expanded="true" signature="1536:1544" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/ManagersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1360">
+              <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="managerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/manager/managerController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#48#76#0#PHP" expanded="true" />
+                <marker date="1510380851205" expanded="true" signature="495:497" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Staff.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-714">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+>>>>>>> permissions
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -49,6 +133,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="permissions" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -264,6 +349,8 @@
       <updated>1510103388090</updated>
       <workItem from="1510103389855" duration="26301000" />
       <workItem from="1510285076933" duration="13385000" />
+      <workItem from="1510370718520" duration="2104000" />
+      <workItem from="1510381429150" duration="104000" />
       <workItem from="1510370718520" duration="2042000" />
       <workItem from="1510382171585" duration="83000" />
     </task>
@@ -288,6 +375,7 @@
       <option name="project" value="LOCAL" />
       <updated>1510381244414</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00004" summary="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff">
       <created>1510382207590</created>
       <option name="number" value="00004" />
@@ -296,6 +384,35 @@
       <updated>1510382207590</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+=======
+    <task id="LOCAL-00004" summary="Missed some file in previous checkin">
+      <created>1510381327161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510381327161</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Missed some file in previous checkin">
+      <created>1510381498953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1510381498954</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Missed some file in previous checkin">
+      <created>1510381516677</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1510381516677</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41894000" />
+    <option name="localTasksCounter" value="4" />
+>>>>>>> permissions
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -359,6 +476,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;1 . https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff&#10;2. https://bitbucket.org/hotelprojectul/software-methodology/issues/22/create-a-view-where-manager-can-see-the&#10;3. https://bitbucket.org/hotelprojectul/software-methodology/issues/20/create-a-permission-model-for-the-staff&#10;4. https://bitbucket.org/hotelprojectul/software-methodology/issues/18/create-authentication-for-staff&#10;5. https://bitbucket.org/hotelprojectul/software-methodology/issues/13/create-a-manager-home-page" />
     <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
+    <MESSAGE value="Missed some file in previous checkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Missed some file in previous checkin" />
     <option name="LAST_COMMIT_MESSAGE" value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
   </component>
   <component name="XDebuggerManager">
@@ -704,6 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Staff.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="391">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
@@ -716,13 +836,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+=======
+        <state relative-caret-position="357">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+>>>>>>> permissions
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
+=======
+        <state relative-caret-position="544">
+        <state relative-caret-position="-663">
+>>>>>>> permissions
           <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
             <element signature="e#46#60#0#PHP" expanded="true" />
@@ -754,6 +885,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
