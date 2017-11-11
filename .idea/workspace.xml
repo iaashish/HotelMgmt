@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4804f8e3-dfa6-4ded-9b22-7b9695974d8e" name="Default" comment="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hotelmanagement/config/permission.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hotelmanagement/database/migrations/2017_11_09_023835_create_permission_tables.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hotelmanagement/database/seeds/StaffTableSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hotelmanagement/resources/views/staff/stafflist.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hotelmanagement/tests/Unit/ManagerLoginTest.php" />
+    <list default="true" id="4804f8e3-dfa6-4ded-9b22-7b9695974d8e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/Auth/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/StaffLoginController.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/StaffLoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/manager/managerController.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/manager/managerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Staff.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Staff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/composer.json" afterPath="$PROJECT_DIR$/hotelmanagement/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/composer.lock" afterPath="$PROJECT_DIR$/hotelmanagement/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/config/app.php" afterPath="$PROJECT_DIR$/hotelmanagement/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/config/debugbar.php" afterPath="$PROJECT_DIR$/hotelmanagement/config/debugbar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/hotelmanagement/database/factories/ModelFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/hotelmanagement/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/public/css/managerstyle.css" afterPath="$PROJECT_DIR$/hotelmanagement/public/css/managerstyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/resources/views/manager/managerhome.blade.php" afterPath="$PROJECT_DIR$/hotelmanagement/resources/views/manager/managerhome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/routes/web.php" afterPath="$PROJECT_DIR$/hotelmanagement/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -346,7 +326,7 @@
       <updated>1510103388090</updated>
       <workItem from="1510103389855" duration="26301000" />
       <workItem from="1510285076933" duration="13385000" />
-      <workItem from="1510370718520" duration="1754000" />
+      <workItem from="1510370718520" duration="2042000" />
     </task>
     <task id="LOCAL-00001" summary="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff">
       <created>1510103885874</created>
@@ -362,15 +342,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510370302389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff">
+      <created>1510381244414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510381244414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41440000" />
+    <option name="totallyTimeSpent" value="41728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42435703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -425,9 +411,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
     <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;1 . https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff&#10;2. https://bitbucket.org/hotelprojectul/software-methodology/issues/22/create-a-view-where-manager-can-see-the&#10;3. https://bitbucket.org/hotelprojectul/software-methodology/issues/20/create-a-permission-model-for-the-staff&#10;4. https://bitbucket.org/hotelprojectul/software-methodology/issues/18/create-authentication-for-staff&#10;5. https://bitbucket.org/hotelprojectul/software-methodology/issues/13/create-a-manager-home-page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manager Landing page and staff home page&#10;Initial commit&#10;1 . https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff&#10;2. https://bitbucket.org/hotelprojectul/software-methodology/issues/22/create-a-view-where-manager-can-see-the&#10;3. https://bitbucket.org/hotelprojectul/software-methodology/issues/20/create-a-permission-model-for-the-staff&#10;4. https://bitbucket.org/hotelprojectul/software-methodology/issues/18/create-authentication-for-staff&#10;5. https://bitbucket.org/hotelprojectul/software-methodology/issues/13/create-a-manager-home-page" />
+    <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -534,6 +520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -682,6 +669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,6 +684,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -703,6 +692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -738,6 +728,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -763,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
