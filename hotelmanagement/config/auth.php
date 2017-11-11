@@ -37,6 +37,7 @@ return [
 
     'guards' => [
         'web' => [
+            // session tracks cookies
             'driver' => 'session',
             'provider' => 'users',
         ],
@@ -124,6 +125,11 @@ return [
         ],
         'admins' => [
             'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+        'staff' => [
+            'provider' => 'staff',
             'table' => 'password_resets',
             'expire' => 15,
         ],

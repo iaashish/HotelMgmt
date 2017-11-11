@@ -17,8 +17,9 @@ class CreateAdminsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('title');
+            $table->string('job_title');
             $table->string('password');
+            //always have remember token!
             $table->rememberToken();
             $table->timestamps();
         });

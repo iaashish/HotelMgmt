@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4804f8e3-dfa6-4ded-9b22-7b9695974d8e" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelmanagement/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/hotelmanagement/app/Exceptions/Handler.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,10 +41,12 @@
         <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
+            <state relative-caret-position="-663">
               <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding>
                 <element signature="e#46#60#0#PHP" expanded="true" />
                 <marker date="1510380971462" expanded="true" signature="1536:1542" ph="{...}" />
+                <marker date="1510380971462" expanded="true" signature="1536:1544" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -66,12 +69,14 @@
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#48#76#0#PHP" expanded="true" />
+                <marker date="1510380851205" expanded="true" signature="495:497" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Staff.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Staff.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Staff.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -95,6 +100,21 @@
       </file>
     </leaf>
   </component>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>\&lt;\?php\n\nreturn \[\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Name\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| This value is the name of your application\. This value is used when the\n    \| framework needs to place the application\'s name in a notification or\n    \| any other location as required by the application or its packages\.\n    \|\n    \*\/\n\n    \'name\' \=\&gt; env\(\'APP_NAME\'\, \'Laravel\'\)\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Environment\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| This value determines the \&quot;environment\&quot; your application is currently\n    \| running in\. This may determine how you prefer to configure various\n    \| services your application utilizes\. Set this in your \&quot;\.env\&quot; file\.\n    \|\n    \*\/\n\n    \'env\' \=\&gt; env\(\'APP_ENV\'\, \'production\'\)\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Debug Mode\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| When your application is in debug mode\, detailed error messages with\n    \| stack traces will be shown on every error that occurs within your\n    \| application\. If disabled\, a simple generic error page is shown\.\n    \|\n    \*\/\n\n    \'debug\' \=\&gt; env\(\'APP_DEBUG\'\, true\)\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application URL\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| This URL is used by the console to properly generate URLs when using\n    \| the Artisan command line tool\. You should set this to the root of\n    \| your application so that it is used when running Artisan tasks\.\n    \|\n    \*\/\n\n    \'url\' \=\&gt; env\(\'APP_URL\'\, \'http\:\/\/localhost\'\)\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Timezone\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| Here you may specify the default timezone for your application\, which\n    \| will be used by the PHP date and date\-time functions\. We have gone\n    \| ahead and set this to a sensible default for you out of the box\.\n    \|\n    \*\/\n\n    \'timezone\' \=\&gt; \'UTC\'\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Locale Configuration\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| The application locale determines the default locale that will be used\n    \| by the translation service provider\. You are free to set this value\n    \| to any of the locales which will be supported by the application\.\n    \|\n    \*\/\n\n    \'locale\' \=\&gt; \'en\'\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Application Fallback Locale\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| The fallback locale determines the locale to use when the current one\n    \| is not available\. You may change the value to correspond to any of\n    \| the language folders that are provided through your application\.\n    \|\n    \*\/\n\n    \'fallback_locale\' \=\&gt; \'en\'\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Encryption Key\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| This key is used by the Illuminate encrypter service and should be set\n    \| to a random\, 32 character string\, otherwise these encrypted strings\n    \| will not be safe\. Please do this before deploying an application\!\n    \|\n    \*\/\n\n    \'key\' \=\&gt; env\(\'APP_KEY\'\)\,\n\n    \'cipher\' \=\&gt; \'AES\-256\-CBC\'\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Logging Configuration\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| Here you may configure the log settings for your application\. Out of\n    \| the box\, Laravel uses the Monolog PHP logging library\. This gives\n    \| you a variety of powerful log handlers \/ formatters to utilize\.\n    \|\n    \| Available Settings\: \&quot;single\&quot;\, \&quot;daily\&quot;\, \&quot;syslog\&quot;\, \&quot;errorlog\&quot;\n    \|\n    \*\/\n\n    \'log\' \=\&gt; env\(\'APP_LOG\'\, \'single\'\)\,\n\n    \'log_level\' \=\&gt; env\(\'APP_LOG_LEVEL\'\, \'debug\'\)\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Autoloaded Service Providers\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| The service providers listed here will be automatically loaded on the\n    \| request to your application\. Feel free to add your own services to\n    \| this array to grant expanded functionality to your applications\.\n    \|\n    \*\/\n\n    \'providers\' \=\&gt; \[\n\n        \/\*\n         \* Laravel Framework Service Providers\.\.\.\n         \*\/\n        Illuminate\\Auth\\AuthServiceProvider\:\:class\,\n        Illuminate\\Broadcasting\\BroadcastServiceProvider\:\:class\,\n        Illuminate\\Bus\\BusServiceProvider\:\:class\,\n        Illuminate\\Cache\\CacheServiceProvider\:\:class\,\n        Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider\:\:class\,\n        Illuminate\\Cookie\\CookieServiceProvider\:\:class\,\n        Illuminate\\Database\\DatabaseServiceProvider\:\:class\,\n        Illuminate\\Encryption\\EncryptionServiceProvider\:\:class\,\n        Illuminate\\Filesystem\\FilesystemServiceProvider\:\:class\,\n        Illuminate\\Foundation\\Providers\\FoundationServiceProvider\:\:class\,\n        Illuminate\\Hashing\\HashServiceProvider\:\:class\,\n        Illuminate\\Mail\\MailServiceProvider\:\:class\,\n        Illuminate\\Notifications\\NotificationServiceProvider\:\:class\,\n        Illuminate\\Pagination\\PaginationServiceProvider\:\:class\,\n        Illuminate\\Pipeline\\PipelineServiceProvider\:\:class\,\n        Illuminate\\Queue\\QueueServiceProvider\:\:class\,\n        Illuminate\\Redis\\RedisServiceProvider\:\:class\,\n        Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider\:\:class\,\n        Illuminate\\Session\\SessionServiceProvider\:\:class\,\n        Illuminate\\Translation\\TranslationServiceProvider\:\:class\,\n        Illuminate\\Validation\\ValidationServiceProvider\:\:class\,\n        Illuminate\\View\\ViewServiceProvider\:\:class\,\n\n        \/\*\n         \* Package Service Providers\.\.\.\n         \*\/\n\n        \/\*\n         \* Application Service Providers\.\.\.\n         \*\/\n        App\\Providers\\AppServiceProvider\:\:class\,\n        App\\Providers\\AuthServiceProvider\:\:class\,\n        \/\/ App\\Providers\\BroadcastServiceProvider\:\:class\,\n        App\\Providers\\EventServiceProvider\:\:class\,\n        App\\Providers\\RouteServiceProvider\:\:class\,\n        Barryvdh\\Debugbar\\ServiceProvider\:\:class\nSpatie\\Permission\\PermissionServiceProvider\:\:class\,\n    \]\,\n\n    \/\*\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \| Class Aliases\n    \|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n    \|\n    \| This array of class aliases will be registered when this application\n    \| is started\. However\, feel free to register as many as you wish as\n    \| the aliases are \&quot;lazy\&quot; loaded so they don\'t hinder performance\.\n    \|\n    \*\/\n\n    \'aliases\' \=\&gt; \[\n\n        \'App\' \=\&gt; Illuminate\\Support\\Facades\\App\:\:class\,\n        \'Artisan\' \=\&gt; Illuminate\\Support\\Facades\\Artisan\:\:class\,\n        \'Auth\' \=\&gt; Illuminate\\Support\\Facades\\Auth\:\:class\,\n        \'Blade\' \=\&gt; Illuminate\\Support\\Facades\\Blade\:\:class\,\n        \'Broadcast\' \=\&gt; Illuminate\\Support\\Facades\\Broadcast\:\:class\,\n        \'Bus\' \=\&gt; Illuminate\\Support\\Facades\\Bus\:\:class\,\n        \'Cache\' \=\&gt; Illuminate\\Support\\Facades\\Cache\:\:class\,\n        \'Config\' \=\&gt; Illuminate\\Support\\Facades\\Config\:\:class\,\n        \'Cookie\' \=\&gt; Illuminate\\Support\\Facades\\Cookie\:\:class\,\n        \'Crypt\' \=\&gt; Illuminate\\Support\\Facades\\Crypt\:\:class\,\n        \'DB\' \=\&gt; Illuminate\\Support\\Facades\\DB\:\:class\,\n        \'Eloquent\' \=\&gt; Illuminate\\Database\\Eloquent\\Model\:\:class\,\n        \'Event\' \=\&gt; Illuminate\\Support\\Facades\\Event\:\:class\,\n        \'File\' \=\&gt; Illuminate\\Support\\Facades\\File\:\:class\,\n        \'Gate\' \=\&gt; Illuminate\\Support\\Facades\\Gate\:\:class\,\n        \'Hash\' \=\&gt; Illuminate\\Support\\Facades\\Hash\:\:class\,\n        \'Lang\' \=\&gt; Illuminate\\Support\\Facades\\Lang\:\:class\,\n        \'Log\' \=\&gt; Illuminate\\Support\\Facades\\Log\:\:class\,\n        \'Mail\' \=\&gt; Illuminate\\Support\\Facades\\Mail\:\:class\,\n        \'Notification\' \=\&gt; Illuminate\\Support\\Facades\\Notification\:\:class\,\n        \'Password\' \=\&gt; Illuminate\\Support\\Facades\\Password\:\:class\,\n        \'Queue\' \=\&gt; Illuminate\\Support\\Facades\\Queue\:\:class\,\n        \'Redirect\' \=\&gt; Illuminate\\Support\\Facades\\Redirect\:\:class\,\n        \'Redis\' \=\&gt; Illuminate\\Support\\Facades\\Redis\:\:class\,\n        \'Request\' \=\&gt; Illuminate\\Support\\Facades\\Request\:\:class\,\n        \'Response\' \=\&gt; Illuminate\\Support\\Facades\\Response\:\:class\,\n        \'Route\' \=\&gt; Illuminate\\Support\\Facades\\Route\:\:class\,\n        \'Schema\' \=\&gt; Illuminate\\Support\\Facades\\Schema\:\:class\,\n        \'Session\' \=\&gt; Illuminate\\Support\\Facades\\Session\:\:class\,\n        \'Storage\' \=\&gt; Illuminate\\Support\\Facades\\Storage\:\:class\,\n        \'URL\' \=\&gt; Illuminate\\Support\\Facades\\URL\:\:class\,\n        \'Validator\' \=\&gt; Illuminate\\Support\\Facades\\Validator\:\:class\,\n        \'View\' \=\&gt; Illuminate\\Support\\Facades\\View\:\:class\,\n        \'Menu\'      \=\&gt; Lavary\\Menu\\Facade\:\:class\,\n        \'Debugbar\' \=\&gt; Barryvdh\\Debugbar\\Facade\:\:class\,\n\n    \]\,\n\n\]\;\n</find>
+      <find>\&lt;\?php\n\/\*\*\n \* Created by PhpStorm\.\n \* User\: ippil\n \* Date\: 11\/8\/2017\n \* Time\: 10\:20 PM\n \*\/\n\nuse Illuminate\\Database\\Seeder\;\nuse Spatie\\Permission\\Models\\Role\;\nuse Spatie\\Permission\\Models\\Permission\;\n\nclass StaffRolesAndPermissions extends Seeder\n\{\n\n    public function run\(\)\n    \{\n        \/\/ Reset cached roles and permissions\n        app\(\)\[\'cache\'\]\-\&gt;forget\(\'spatie\.permission\.cache\'\)\;\n\n        \/\/ For receptionist\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view booking information\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view room status\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view guest personal info\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'book room\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'edit guest preferences\'\]\)\;\n\n        \/\/For accountant\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view budget\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'edit budget\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view inventory\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'edit inventory\'\]\)\;\n\n        \/\/Maintenance\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view room status\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'edit room status\'\]\)\;\n        Permission\:\:create\(\[\'name\' \=\&gt; \'view booking information\'\]\)\;\n\n        \/\/ create roles and assign existing permissions\n\n        \$role \= Role\:\:create\(\[\'name\' \=\&gt; \'receptionist\'\]\)\;\n        \$role\-\&gt;givePermissionTo\(\'view booking information\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'view room status\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'view guest personal info\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'book room\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'edit guest preferences\'\)\;\n\n        \$role \= Role\:\:create\(\[\'name\' \=\&gt; \'Accountant\'\]\)\;\n        \$role\-\&gt;givePermissionTo\(\'view budget\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'edit budget\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'view inventory\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'edit inventory\'\)\;\n\n        \$role \= Role\:\:create\(\[\'name\' \=\&gt; \'Maintenance\'\]\)\;\n        \$role\-\&gt;givePermissionTo\(\'view room status\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'edit room status\'\)\;\n        \$role\-\&gt;givePermissionTo\(\'view booking information\'\)\;\n\n    \}\n\n\}</find>
+      <find>StaffController</find>
+      <find>\&lt;\?php\n\nnamespace App\;\n\nuse Illuminate\\Notifications\\Notifiable\;\nuse Illuminate\\Foundation\\Auth\\User as Authenticatable\;\nuse Illuminate\\Database\\Eloquent\\Model\;\nuse Illuminate\\Support\\Facades\\DB as DB\;\nuse Spatie\\Permission\\Traits\\HasRoles\;\nuse DebugBar\\DebugBar\;\n\nclass Staff extends Model\n\{\n    use HasRoles\;\n    use Notifiable\;\n\n    protected \$guard \= \'staff\'\;\n\n    protected \$table \= \'staff\'\;\n\n    \/\*\*\n     \* The attributes that are mass assignable\.\n     \*\n     \* \@var array\n     \*\/\n    protected \$fillable \= \[\n        \'first\'\,\'last\'\,\'email\'\,\'dob\'\,\'dateofhire\'\,\'ssn\'\,\'address\'\, \'phonenumber\'\,\'staff_type\'\,\'password\'\,\n    \]\;\n\n    \/\*\*\n     \* The attributes that should be hidden for arrays\.\n     \*\n     \* \@var array\n     \*\/\n    protected \$hidden \= \[\n        \'password\'\, \'remember_token\'\,\n    \]\;\n\n function scopeusercount \(\) \{\n        return User\:\:all\(\)\-\&gt;count\; \n    \}\n\n    \/\*\*\n \* Retrieves the acceptable enum fields for a column\n \*\n \* \@param string \$column Column name\n \*\n \* \@return array\n \*\/\npublic  function scopestafftype \(\) \{\n    \/\/ Create an instance of the model to be able to get the table name\n    \$instance \= new static\; \/\/ create an instance of the model to be able to get the table name\n    \$type \= DB\:\:table\(\'roles\'\)\-\&gt;select\(\'name\'\)\-\&gt;get\(\)\;\n\n    \$enum \= array\(\)\;\n    foreach\(\$type as \$name\)\{\n        DebugBar\:\:info\(\$name\)\;\n    \}\n        \$enum\[\] \= \$type\;\n\n\n\n    return \$enum\;\n\}\n\}\n</find>
+      <find>staffcontroller</find>
+      <find>pho</find>
+      <find>$phoneNumber</find>
+      <find>phoneNumber</find>
+      <find>$request-&gt;expectsJson(</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -104,6 +124,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="permissions" />
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
@@ -169,6 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +344,7 @@
       <workItem from="1510285076933" duration="13385000" />
       <workItem from="1510370718520" duration="2104000" />
       <workItem from="1510381429150" duration="104000" />
+      <workItem from="1510370718520" duration="2042000" />
     </task>
     <task id="LOCAL-00001" summary="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff">
       <created>1510103885874</created>
@@ -369,15 +393,20 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="41894000" />
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4311649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42435703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.48487142" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
@@ -430,6 +459,7 @@
     <MESSAGE value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
     <MESSAGE value="Missed some file in previous checkin" />
     <option name="LAST_COMMIT_MESSAGE" value="Missed some file in previous checkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manager Landing page and staff home page&#10;Initial commit&#10;https://bitbucket.org/hotelprojectul/software-methodology/issues/19/manager-should-be-able-to-create-the-staff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,6 +474,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Middleware/EncryptCookies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -497,6 +535,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -504,6 +543,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -511,6 +551,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -525,6 +566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -602,6 +644,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,6 +715,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,6 +730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,6 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -728,6 +774,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -753,6 +800,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -761,6 +809,7 @@
         <state relative-caret-position="408">
           <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
+            <marker date="1510380851189" expanded="true" signature="136:493" ph="{...}" />
             <marker date="1510380851189" expanded="true" signature="256:271" ph="{...}" />
             <marker date="1510380851189" expanded="true" signature="478:491" ph="{...}" />
           </folding>
@@ -771,6 +820,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -778,10 +829,12 @@
     <entry file="file://$PROJECT_DIR$/hotelmanagement/app/Http/Controllers/staff/staffcontroller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
+        <state relative-caret-position="-663">
           <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
             <element signature="e#46#60#0#PHP" expanded="true" />
             <marker date="1510380971462" expanded="true" signature="1536:1542" ph="{...}" />
+            <marker date="1510380971462" expanded="true" signature="1536:1544" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -800,6 +853,7 @@
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#48#76#0#PHP" expanded="true" />
+            <marker date="1510380851205" expanded="true" signature="495:497" ph="{...}" />
           </folding>
         </state>
       </provider>

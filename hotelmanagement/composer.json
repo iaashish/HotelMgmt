@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "barryvdh/laravel-debugbar": "^3.1",
         "doctrine/dbal": "^2.5",
         "fideloper/proxy": "~3.3",
         "itsgoingd/clockwork": "^2.0",
@@ -16,6 +15,7 @@
         "spatie/laravel-permission": "^2.7"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.1",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "laravel/dusk": "^2.0",
