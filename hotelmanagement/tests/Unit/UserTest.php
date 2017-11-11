@@ -9,7 +9,18 @@ use App\User;
 
 class UserTest extends TestCase
 {
+	public function testAddUsers()
+	{
 
+        $size = User::count();
+        $user = factory(User::class)->create();
+        //$user->save();
+		//$user = factory(User::class, 3)->create(['name' => 'software']);
+        $newSize = User::count();
+		//$all = User::all();
+
+		$this->assertEquals(($size + 1), $newSize);
+	}
 
 	public function testLoadSampleUsers()
 	{
@@ -35,15 +46,15 @@ class UserTest extends TestCase
     }
 
 
- /*   public function testDeleteUser()
+    public function testDeleteUser()
     {
 
         $user = User::where('name', 'software');
 
         $user->delete();
 
-        $this->assertDatabaseHas('users', ['name' => 'software']);
+        $this->assertDatabaseMissing('users', ['name' => 'software']);
 
 
-    }*/
+    }
 }

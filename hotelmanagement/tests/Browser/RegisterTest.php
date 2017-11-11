@@ -44,4 +44,9 @@ class RegisterTest extends DuskTestCase
                    $user->delete();
         });
     }
+    public function tearDown()
+    {
+        $user = User::where('name', 'Joe10');
+        $user->delete();
+    }
 }

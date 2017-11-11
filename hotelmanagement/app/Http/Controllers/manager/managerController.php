@@ -24,4 +24,25 @@ class managerController extends Controller
     }
 
 
+public function registerStaff(Request $request)
+    {
+        Debugbar:info($request);
+        $this->redirectTo = "/managerhome";
+        Staff::create([
+            'first' => $request->first,
+            'last' => $request->last,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'dateofhire' => $request->dateofhire,
+            'dob' => $request->dob,
+            'phonenumber' => $request->phonenumber,
+            'ssn' => $request->ssn,
+            'address' => $request->address,
+            'staff_type' => $request->staff_type,
+        ]);
+
+
+        return redirect('/managerhome');
+    }
+
 }

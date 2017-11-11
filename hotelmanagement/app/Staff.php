@@ -19,6 +19,8 @@ class Staff extends Authenticatable
 
     protected $table = 'staff';
 
+
+    
     /**
      * The attributes that are mass assignable.
      *

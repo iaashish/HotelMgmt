@@ -52,7 +52,7 @@ class staffcontroller extends Controller
         }*/
 
 
-    public function registerStaff(Request $request)
+/*    public function registerStaff(Request $request)
     {
         Debugbar:info($request);
         $this->redirectTo = "/managerhome";
@@ -71,5 +71,5 @@ class staffcontroller extends Controller
 
 
         return redirect('/managerhome');
-    }
+    }*/
 }

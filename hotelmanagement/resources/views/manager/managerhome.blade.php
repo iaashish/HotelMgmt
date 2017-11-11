@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Section scroller one-page template</title>
-    <meta name="description" content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap." />
+    <meta name="description"
+          content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Codeply">
 
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}" />
-  </head>
-  <body >
-    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
+</head>
+<body>
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -39,19 +39,27 @@
                 <li>&nbsp;</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart-o fa-lg"></i></a></li>
+                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
 <section class="container-fluid" id="section1">
-    @include('staff\stafflist')
+    @include('staff.stafflist')
 
 </section>
 
 <section class="container-fluid" id="section2">
-@include('staff\registerstaff') 
+    @include('staff.registerstaff')
 </section>
 
 <section>
@@ -60,7 +68,8 @@
             <div class="col-sm-2 col-sm-offset-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -68,7 +77,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -76,7 +86,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -84,7 +95,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -94,7 +106,8 @@
             <div class="col-sm-2 col-sm-offset-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -102,7 +115,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -110,7 +124,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -118,7 +133,8 @@
             <div class="col-sm-2 col-xs-6">
                 <div class="text-center">
                     <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail" src="//placehold.it/100/444">
+                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
+                             src="//placehold.it/100/444">
                     </a>
                     <h3 class="text-center"></h3>
                 </div>
@@ -132,12 +148,17 @@
     <h1 class="text-center">A Bootstrap Foundation</h1>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
-            <h3 class="text-center lato slideInUp animate">That <strong>Doesn't</strong> Have to Look Like Bootstrap.</h3>
+            <h3 class="text-center lato slideInUp animate">That <strong>Doesn't</strong> Have to Look Like Bootstrap.
+            </h3>
             <br>
             <div class="row">
-                <div class="col-xs-4 col-xs-offset-1">Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's a lotta content.</div>
+                <div class="col-xs-4 col-xs-offset-1">Some brand-tacular designs even have home page content that is
+                    taller that 12,000 pixels. That's a lotta content.
+                </div>
                 <div class="col-xs-2"></div>
-                <div class="col-xs-4 text-right">Anyhoo, this is just some random blurb of text, and Bootply.com is a playground and code editor for Bootstrap.</div>
+                <div class="col-xs-4 text-right">Anyhoo, this is just some random blurb of text, and Bootply.com is a
+                    playground and code editor for Bootstrap.
+                </div>
             </div>
             <br>
             <p class="text-center">
@@ -159,13 +180,16 @@
             <div class="col-md-8 col-md-offset-1">
                 <div class="row form-group">
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"
+                               required="">
                     </div>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" id="middleName" name="firstName" placeholder="Middle Name" required="">
+                        <input type="text" class="form-control" id="middleName" name="firstName"
+                               placeholder="Middle Name" required="">
                     </div>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"
+                               required="">
                     </div>
                 </div>
                 <div class="row form-group">
@@ -188,15 +212,15 @@
             </div>
             <div class="col-md-3 pull-right">
                 <address>
-                  <strong>Some LLC</strong><br>
-                  795 Folsom Ave, Suite 600<br>
-                  Newport, RI 94107<br>
-                  P: (123) 456-7890
+                    <strong>Some LLC</strong><br>
+                    795 Folsom Ave, Suite 600<br>
+                    Newport, RI 94107<br>
+                    P: (123) 456-7890
                 </address>
                 <address>
-              <strong>Email Us</strong><br>
-              <a href="mailto:#">first.last@example.com</a>
-            </address>
+                    <strong>Email Us</strong><br>
+                    <a href="mailto:#">first.last@example.com</a>
+                </address>
             </div>
         </div>
     </div>
@@ -213,14 +237,16 @@
                     <img src="https://placehold.it/100">
                 </div>
                 <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
+                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
             </div>
             <hr>
             <div class="media">
                 <h3>Boom</h3>
                 <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
+                        ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
                 <div class="media-right">
                     <img src="https://placehold.it/100">
@@ -233,14 +259,16 @@
                     <img src="https://placehold.it/100">
                 </div>
                 <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
+                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
             </div>
             <hr>
             <div class="media">
                 <h3>Boom</h3>
                 <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
+                        ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
                 <div class="media-right">
                     <img src="https://placehold.it/100">
@@ -253,14 +281,16 @@
                     <img src="https://placehold.it/100">
                 </div>
                 <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
+                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
             </div>
             <hr>
             <div class="media">
                 <h3>Boom</h3>
                 <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
+                        ipsum dolor sit amet, adipiscing elit.</p>
                 </div>
                 <div class="media-right">
                     <img src="https://placehold.it/100">
@@ -277,7 +307,8 @@
             <h3 class="text-center">This will scale down proportionately.</h3>
         </li>
         <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
-            <a href="" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Responsive Design</a>
+            <a href="" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Responsive
+                Design</a>
         </li>
     </ul>
 </section>
@@ -383,11 +414,11 @@
         </div>
     </div>
 </div>
-    <!--scripts loaded here-->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
-   
-  </body>
+<!--scripts loaded here-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</body>
 </html>
