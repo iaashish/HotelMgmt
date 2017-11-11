@@ -9,15 +9,15 @@ class StaffLoginController extends Controller
 
 
 
-      public function showhomepageaa()
+      public function showhomepage()
     {
 
-      return view('staff\staffhome');
+      return view('staff.staffhome');
 
     }
     public function __construct()
     {
-      $this->middleware('guest:staff');
+     $this->middleware('guest:staff');
     }
     public function showLoginForm()
     {
@@ -30,7 +30,7 @@ class StaffLoginController extends Controller
     public function login(Request $request)
     {
       // Validate the form data
-    	Debugbar::info($request);
+//    	Debugbar::info($request);
       $this->validate($request, [
         'email'   => 'required|email',
         'password' => 'required|min:6'
@@ -47,8 +47,8 @@ class StaffLoginController extends Controller
 
     public function logout(Request $request)
     {
-      Debugbar::info($request);
-        $this->guard()->logout();
+
+        $this->guard('staff')->logout();
 
         $request->session()->invalidate();
 

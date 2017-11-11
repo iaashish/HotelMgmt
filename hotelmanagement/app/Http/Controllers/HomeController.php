@@ -15,7 +15,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        Debugbar::info("hello");
         $this->middleware('auth');
     }
 
@@ -26,7 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-         Debugbar::info("hello");
-        return view('home');
+        return view('manager\managerhome');
     }
 }
