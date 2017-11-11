@@ -36,7 +36,7 @@ Route::get('staffhome',  'staff\staffcontroller@showhomepage');
 
 Route::resource('managers', 'ManagersController');
 Route::get('/managerhome', 'manager\managerController@index');
-Route::post('/registerstaff','staff\staffcontroller@registerStaff');
+Route::post('/registerstaff','manager\managerController@registerStaff');
 
 Route::get('/booking' , 'BookingController@index');
 Route::post('/registerbooking' , 'BookingController@registerbooking');
