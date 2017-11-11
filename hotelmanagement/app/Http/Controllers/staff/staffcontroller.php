@@ -54,6 +54,7 @@ class staffcontroller extends Controller
 
     public function registerStaff(Request $request)
     {
+        Debugbar:info($request);
         $this->redirectTo = "/managerhome";
         Staff::create([
             'first' => $request->first,
