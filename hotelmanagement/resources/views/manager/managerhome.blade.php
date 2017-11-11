@@ -54,12 +54,12 @@
 </nav>
 
 <section class="container-fluid" id="section1">
-    @include('staff\stafflist')
+    @include('staff.stafflist')
 
 </section>
 
 <section class="container-fluid" id="section2">
-    @include('staff\registerstaff')
+    @include('staff.registerstaff')
 </section>
 
 <section>
