@@ -183,7 +183,6 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-10">
-                        <button class="btn btn-default btn-lg pull-right">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -360,7 +359,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
                 <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
             </div>
             <div class="modal-body row">
@@ -373,7 +372,7 @@
                         <input type="password" class="form-control input-lg" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                        <!-- <button class="btn btn-danger btn-lg btn-block">Sign In</button> -->
                         <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
                     </div>
                 </form>

@@ -37,11 +37,11 @@ class RegisterTest extends DuskTestCase
                     //->click('button[type="submit"]')
                     ->click('button[type="submit"]')
                     //->assertSee('USER Dashboard')
-                    ->assertPathIs('/home')
-                    ->assertTitle('Laravel');
+                    ->assertPathIs('/home');
+
                     //->assertSee("You are logged in!");
-                    $user = User::where('name', 'Joe10');
-                    $user->delete();
+                   $user = User::where('name', 'Joe10');
+                   $user->delete();
         });
     }
 }
