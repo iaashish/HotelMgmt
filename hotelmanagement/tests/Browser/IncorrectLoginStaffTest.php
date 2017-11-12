@@ -15,12 +15,22 @@ class IncorrectLoginStaffTest extends DuskTestCase
         $browser->visit('/')
         ->clickLink('Staff Login')
         ->assertPathIs('/stafflogin')
+        //testing with incorrect email syntax
         ->value('#email','wrongEmail')
         ->assertInputValue('#email', 'wrongEmail')
-        ->value('#password','!@#$%')
-        ->assertInputValue('#password', '!@#$%')
+        ->value('#password','123456')
+        ->assertInputValue('#password', '123456')
         ->press('Login')
-        //incorrect login because of invalid email
+        //error pops up because of invalid email syntax
+        ->assertPathIs('/stafflogin')
+
+        //testing with incorrect password syntax
+        ->value('#email','Brennan@gmail.com')
+        ->assertInputValue('#email', 'Brennan@gmail.com')
+        ->value('#password','!@#$%^')
+        ->assertInputValue('#password', '!@#$%^')
+        ->press('Login')
+        //error pops up because of invalid password syntax
         ->assertPathIs('/stafflogin');
     });
 
