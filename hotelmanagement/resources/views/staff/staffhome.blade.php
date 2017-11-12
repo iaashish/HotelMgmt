@@ -115,10 +115,10 @@ body {font-family: "Lato", sans-serif}
   <form class="w3-container" action="/action_page.php">
     <p>      
     <label class="w3-text-black"><b>First Name</b></label>
-    <input class="w3-input w3-border w3-sand" name="first" type="text"></p>
+    <input class="w3-input w3-border w3-sand" id= "first" name="first" type="text"></p>
     <p>      
     <label class="w3-text-black"><b>Last Name</b></label>
-    <input class="w3-input w3-border w3-sand" name="last" type="text"></p>
+    <input class="w3-input w3-border w3-sand" id="last" name="last" type="text"></p>
     <p>
     <button class="w3-btn w3-black">Register</button></p>
   </form>
