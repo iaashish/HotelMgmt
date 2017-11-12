@@ -5,10 +5,8 @@
     <title>Mange Staff</title>
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
    
 
-    <link rel="stylesheet" href="{{asset('css/manage.css')}}"/>
 
 
    <!-- Fonts -->
@@ -16,8 +14,6 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-     
-     
      
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

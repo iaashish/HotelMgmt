@@ -1,8 +1,10 @@
+
+
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
 
-                        <h4>Current Staff Bootstrap Snipp for Datatable</h4>
+                        <h4>Lis of hotel staff with their contact information.</h4>
                         <div class="table-responsive">
                             <table id="mytable" class="table table-bordred table-striped">
                                 <thead>
@@ -11,10 +13,8 @@
                                 <th>Staff Type</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>DOB</th>
                                 <th>Date of Hire</th>
-                                <th>SSN</th>
-                                <th>Phone Number</th>
+                              
                                 <th>Edit</th>
 
                                 <th>Delete</th>
@@ -27,10 +27,8 @@
                             <td>{{$object->staff_type}}</td>
                             <td>{{$object->first.$object->last}}</td>
                             <td>{{$object->email}}</td>
-                            <td>{{$object->dob}}</td>
                             <td>{{$object->dateofhire}}</td>
-                            <td>{{$object->ssn}}</td>
-                            <td>{{$object->phonenumber}}</td>
+                        
                             <td>
                                 <p data-placement="top" data-toggle="tooltip" title="Edit">
                                     <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
