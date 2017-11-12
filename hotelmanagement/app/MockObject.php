@@ -2,13 +2,13 @@
 
 namespace App;
 
-class Foo {
+class MockObject {
 
     private $field;
-    public function constructor(Foo $field){
+    public function constructor(MockObject $field){
         $this->field = $field;
     }
-    public function bar(){
+    public function mockFunction(){
         return $this->field->returnSomething();
     }
 }
