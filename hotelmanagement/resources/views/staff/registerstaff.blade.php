@@ -102,11 +102,7 @@
                             <div class="col-md-6">
                                 <select name="staff_type" class="form-control">
  <option selected="true" disabled="disabled" placeholder="Choose Staff Type">Choose Staff Type</option>
-                                    @foreach ($data as $object )
-
-                                    <option>{{$object}}</option>
-
-                                    @endforeach
+                                    
                                 </select>
                             </div>
                         </div>

@@ -28,11 +28,11 @@ a:hover {
 }
 
 .btn-danger {
-    background-color:#f44d3c;
+    background-color:#694a47;
 }
 
 .text-danger, a.text-danger {
-    color:#f44d3c;
+    color:#e9e0df;
 }
 
 .btn-huge {
@@ -80,11 +80,13 @@ a:hover {
 }
 
 .navbar-trans .form-control:focus {
-	border-color: #eee;
+	border-color: rgb(80, 18, 18);
 	outline: 0;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
 }
+
+
 
 .scroll-down {
   position: absolute;
@@ -141,8 +143,8 @@ section {
 }
   
 #section1, #section3 {
-	background-color: rgba(0,0,0,0.7);
-	color:#1b1b1b;
+	background-color: rgba(0,0,0,0.4);
+	color:#0c1b03;
 	font-family: 'Bitter', serif;
 }
   
@@ -195,3 +197,4 @@ footer .nav>li>a:hover {
     background-color:transparent;
 	color:#fff;
 }
+

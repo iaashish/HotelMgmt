@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
 
-                        <h4>Bootstrap Snipp for Datatable</h4>
+                        <h4>Current Staff Bootstrap Snipp for Datatable</h4>
                         <div class="table-responsive">
                             <table id="mytable" class="table table-bordred table-striped">
                                 <thead>
@@ -51,7 +51,9 @@
 
                     </tbody>
                 </table>
-                {{ $columndata->links() }}
+                
+
+                               {{ $columndata->links() }}
             </div>
         </div>
     </div>
