@@ -9,7 +9,7 @@ use App\User;
 
 class IncorrectLoginManagerTest extends DuskTestCase
 {
-    public function testManagerLogin()
+    public function testIncorrectManagerLogin()
     {
     $this->browse(function (Browser $browser) {
         $browser->visit('/')
