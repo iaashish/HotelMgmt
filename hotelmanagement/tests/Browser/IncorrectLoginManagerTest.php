@@ -13,14 +13,24 @@ class IncorrectLoginManagerTest extends DuskTestCase
     {
     $this->browse(function (Browser $browser) {
         $browser->visit('/')
+        //testing with incorrect email syntax
         ->clickLink('Manager Login')
         ->assertPathIs('/login')
         ->value('#email','wrongEmail')
         ->assertInputValue('#email', 'wrongEmail')
-        ->value('#password','!@#$%')
-        ->assertInputValue('#password', '!@#$%')
+        ->value('#password','123456')
+        ->assertInputValue('#password', '123456')
         ->press('Login')
-        //incorrect login because of invalid email type
+        //error pops up because of invalid password syntax
+        ->assertPathIs('/login')
+
+        //testing with incorrect password syntax
+        ->value('#email','Brennan@gmail.com')
+        ->assertInputValue('#email', 'Brennan@gmail.com')
+        ->value('#password','!@#$%^')
+        ->assertInputValue('#password', '!@#$%^')
+        ->press('Login')
+        //error pops up because of invalid password syntax
         ->assertPathIs('/login');
     });
 
