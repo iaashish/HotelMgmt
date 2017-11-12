@@ -13,8 +13,18 @@ class IncorrectLoginStaffTest extends DuskTestCase
     {
     $this->browse(function (Browser $browser) {
         $browser->visit('/')
+
+        //testing with empty fields
         ->clickLink('Staff Login')
         ->assertPathIs('/stafflogin')
+        ->value('#email','')
+        ->assertInputValue('#email', '')
+        ->value('#password','')
+        ->assertInputValue('#password', '')
+        ->press('Login')
+        //error pops up because of empty fields
+        ->assertPathIs('/stafflogin')
+
         //testing with incorrect email syntax
         ->value('#email','wrongEmail')
         ->assertInputValue('#email', 'wrongEmail')

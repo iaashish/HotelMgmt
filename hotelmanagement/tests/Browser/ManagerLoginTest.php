@@ -54,7 +54,7 @@ class ManagerLoginTest extends DuskTestCase
                     ->assertInputValue('#ssn', '4444')
                     ->select('#staff_type', 'Accountant')
                     ->clickLink('Register');
-
+                    //staff should exist and can be deleted from database
                     $staff = Staff::where('first', 'Joe');
                     $staff->delete();
         });

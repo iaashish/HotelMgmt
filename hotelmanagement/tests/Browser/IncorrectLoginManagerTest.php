@@ -13,9 +13,19 @@ class IncorrectLoginManagerTest extends DuskTestCase
     {
     $this->browse(function (Browser $browser) {
         $browser->visit('/')
-        //testing with incorrect email syntax
+
+        //testing with empty fields
         ->clickLink('Manager Login')
         ->assertPathIs('/login')
+        ->value('#email','')
+        ->assertInputValue('#email', '')
+        ->value('#password','')
+        ->assertInputValue('#password', '')
+        ->press('Login')
+        //error pops up because of empty fields
+        ->assertPathIs('/login')
+
+        //testing with incorrect email syntax
         ->value('#email','wrongEmail')
         ->assertInputValue('#email', 'wrongEmail')
         ->value('#password','123456')
