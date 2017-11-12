@@ -13,15 +13,15 @@ class IncorrectLoginStaffTest extends DuskTestCase
     {
     $this->browse(function (Browser $browser) {
         $browser->visit('/')
-        ->clickLink('/stafflogin')
-        ->assertSee('staff  Login Page')
+        ->clickLink('Staff Login')
         ->assertPathIs('/stafflogin')
         ->value('#email','wrongEmail')
-        ->assertInputValue('#emai', 'wrongEmail')
+        ->assertInputValue('#email', 'wrongEmail')
         ->value('#password','!@#$%')
         ->assertInputValue('#password', '!@#$%')
         ->press('Login')
-        ->assertSee("Please include an '@' in the email address. wrongEmail is missing an '@'.");
+        //incorrect login because of invalid email
+        ->assertPathIs('/stafflogin');
     });
 
     }
