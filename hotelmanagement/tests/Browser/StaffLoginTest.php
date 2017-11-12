@@ -22,7 +22,11 @@ class StaffLoginTest extends DuskTestCase
         ->press('Login')
         //incorrect login because of invalid email
         ->assertPathIs('/staffhome')
-        ->assertSee('Staff Homepage');
+        ->assertSee('Staff Homepage')
+        ->type('first','Guest')
+        ->assertInputValue('#first', 'Guest')
+        ->type('last','One')
+        ->assertInputValue('#last', 'One');
     });
 
     }
