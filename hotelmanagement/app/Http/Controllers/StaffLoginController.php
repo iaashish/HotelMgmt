@@ -29,8 +29,7 @@ class StaffLoginController extends Controller
 
     public function login(Request $request)
     {
-      // Validate the form data
-//    	Debugbar::info($request);
+
       $this->validate($request, [
         'email'   => 'required|email',
         'password' => 'required|min:6'

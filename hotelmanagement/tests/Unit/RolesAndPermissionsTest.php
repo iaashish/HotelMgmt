@@ -4,6 +4,8 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class RolesAndPermissionsTest extends TestCase
 {
@@ -14,6 +16,7 @@ class RolesAndPermissionsTest extends TestCase
      */
     public function testExample()
     {
-        $this->assertTrue(true);
+
+
     }
 }

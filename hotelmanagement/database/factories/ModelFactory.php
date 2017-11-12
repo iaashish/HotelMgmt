@@ -38,7 +38,7 @@ $factory->define(App\Staff::class, function (Faker $faker) {
         'address' => $faker->unique()->address,
         'phonenumber' => $faker->unique()->phoneNumber,
         'staff_type' => 'Receptionist',
-        'password' => $password ?: $password = bcrypt('123456'),
+        'password' =>  bcrypt('123456'),
         //can ignore happinessLevel since we defaulted it to 0
     ];
 });
