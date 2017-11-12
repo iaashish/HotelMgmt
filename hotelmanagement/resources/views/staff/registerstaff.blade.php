@@ -5,7 +5,7 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="/registerstaff">
+                    <form class="form-horizontal" name= "form" method="POST" action="/registerstaff">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
@@ -100,21 +100,15 @@
                         <div class="form-group">
                             <label for="ssn" class="col-md-4 control-label">Staff Type</label>
                             <div class="col-md-6">
-                                <select name="staff_type" class="form-control">
+                                <select name="staff_type" id="staff_type" class="form-control">
  <option selected="true" disabled="disabled" placeholder="Choose Staff Type">Choose Staff Type</option>
-                                    @foreach ($data as $object )
-
-                                    <option>{{$object}}</option>
-
-                                    @endforeach
+                                    
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
+                                <button id="register" dusk="register-button"  type="submit" class="hello"><a onclick="form.submit();" href="#">Register</a></button>
                             </div>
                         </div>
                     </form>

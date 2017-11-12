@@ -67,7 +67,7 @@ class Staff extends Authenticatable
     public function scopestaffcolumns()
     {
 
-        return DB::table('staff')->paginate(2);
+        return DB::table('staff')->paginate(10);
     }
 
 

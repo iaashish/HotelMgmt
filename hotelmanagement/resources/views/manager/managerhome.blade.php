@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Section scroller one-page template</title>
-    <meta name="description"
-          content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Codeply">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
-</head>
-<body>
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+
+
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation" style="position:relative"> 
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -30,11 +33,10 @@
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">Staff</a></li>
-                <li><a href="#section3">Then</a></li>
-                <li><a href="#section4">Then</a></li>
-                <li><a href="#section5">Then</a></li>
-                <li><a href="#section6">Then</a></li>
+                <li><a href="/manageraddstaff">Staff</a></li>
+                <li><a href="/managermange">Manage</a></li>
+               
+
 
                 <li>&nbsp;</li>
             </ul>
@@ -53,373 +55,110 @@
     </div>
 </nav>
 
-<section class="container-fluid" id="section1">
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="/picture/mang.png" style="width:50%" alt="ManagerPicture">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+          
+          </div>
+        </div>
+        <div class="w3-container">
+
+        <hr>
+           <u>         <h4>Personal Informationa:</h4> </u>
+          
+           <p><i class="fa fa-fw fa-envelope"></i> Sarah.Nick@gmail.com</p>
+
+          <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+        <p>
+            <hr>
+                <u>  <h4>Bank account Information</h4></u>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex info</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card info</p>
+        <hr>
+        <address>
+       <u> <strong> <i class="fa fa-fw fa-map-marker"></i> Address</strong></u>
+                    <br>
+                    215 Republic Ave, Apt 5306<br>
+                    Lafayette, LA 70508<br>
+                    P: (123) 456-7890
+                </address>
+          <hr>
+
+          
+
+          
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current Staff</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b> All Staff haired since: </b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p></p>
+          <hr>
+          <div class="w3-third"
+
+<section class="w3-container">
     @include('staff.stafflist')
 
 </section>
 
-<section class="container-fluid" id="section2">
-    @include('staff.registerstaff')
-</section>
+</div>
+          
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity "><b>Staff member not found</b></h5>
+          <p>Cto add new staff member, please go to staff first and register the employee, then you can assign a task.</p>
+          <a href="/manageraddstaff" class="w3-text-teal">Click here</a>
 
-<section>
-    <div class="container-fluid v-center">
-        <div class="row">
-            <div class="col-sm-2 col-sm-offset-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
+          <hr>
         </div>
-        <div class="row">
-            <div class="col-sm-2 col-sm-offset-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <div class="text-center">
-                    <a href="">
-                        <img style="width:100px;" class="img-circle img-responsive img-thumbnail"
-                             src="//placehold.it/100/444">
-                    </a>
-                    <h3 class="text-center"></h3>
-                </div>
-            </div>
+      
         </div>
-        <!--/row-->
+      </div>
+
+      
+
+    <!-- End Right Column -->
     </div>
-</section>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
 
-<section class="container-fluid" id="section3">
-    <h1 class="text-center">A Bootstrap Foundation</h1>
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <h3 class="text-center lato slideInUp animate">That <strong>Doesn't</strong> Have to Look Like Bootstrap.
-            </h3>
-            <br>
-            <div class="row">
-                <div class="col-xs-4 col-xs-offset-1">Some brand-tacular designs even have home page content that is
-                    taller that 12,000 pixels. That's a lotta content.
-                </div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-4 text-right">Anyhoo, this is just some random blurb of text, and Bootply.com is a
-                    playground and code editor for Bootstrap.
-                </div>
-            </div>
-            <br>
-            <p class="text-center">
-                <img src="//placehold.it/444x222/444/FFF" class="img-responsive thumbnail center-block ">
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="section4">
-    <div class="container v-center">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Make Contact</h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-1">
-                <div class="row form-group">
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"
-                               required="">
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" id="middleName" name="firstName"
-                               placeholder="Middle Name" required="">
-                    </div>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"
-                               required="">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-sm-5">
-                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                    </div>
-                    <div class="col-sm-5">
-                        <input type="email" class="form-control" name="phone" placeholder="Phone" required="">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-sm-10">
-                        <input type="homepage" class="form-control" placeholder="Website URL" required="">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-sm-10">
-                        <button class="btn btn-default btn-lg pull-right">Contact Us</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 pull-right">
-                <address>
-                    <strong>Some LLC</strong><br>
-                    795 Folsom Ave, Suite 600<br>
-                    Newport, RI 94107<br>
-                    P: (123) 456-7890
-                </address>
-                <address>
-                    <strong>Email Us</strong><br>
-                    <a href="mailto:#">first.last@example.com</a>
-                </address>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container-fluid" id="section5">
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-            <h2 class="text-center lato">Section with Marketing Highlights.</h2>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-left">
-                    <img src="https://placehold.it/100">
-                </div>
-                <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
-                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-            </div>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
-                        ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-                <div class="media-right">
-                    <img src="https://placehold.it/100">
-                </div>
-            </div>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-left">
-                    <img src="https://placehold.it/100">
-                </div>
-                <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
-                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-            </div>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
-                        ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-                <div class="media-right">
-                    <img src="https://placehold.it/100">
-                </div>
-            </div>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-left">
-                    <img src="https://placehold.it/100">
-                </div>
-                <div class="media-body media-middle">
-                    <p>Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's
-                        a lotta content Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-            </div>
-            <hr>
-            <div class="media">
-                <h3>Boom</h3>
-                <div class="media-body media-middle">
-                    <p>Offset right home page content that is taller that 12,000 pixels. That's a lotta content Lorem
-                        ipsum dolor sit amet, adipiscing elit.</p>
-                </div>
-                <div class="media-right">
-                    <img src="https://placehold.it/100">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="container-fluid" id="section6">
-    <ul class="row list-unstyled">
-        <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
-            <h3 class="text-center">This will scale down proportionately.</h3>
-        </li>
-        <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
-            <a href="" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Responsive
-                Design</a>
-        </li>
-    </ul>
-</section>
-
-<section class="container-fluid" id="section7">
-    <div class="row">
-        <!--fontawesome icons-->
-        <div class="col-sm-1 col-sm-offset-3 col-xs-4 text-center">
-            <i class="fa fa-github fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-foursquare fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-pinterest fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-google-plus fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-twitter fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-dribbble fa-4x"></i>
-        </div>
-    </div>
-</section>
-
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3 column">
-                <h4>Information</h4>
-                <ul class="nav">
-                    <li><a href="about-us.html">Products</a></li>
-                    <li><a href="about-us.html">Services</a></li>
-                    <li><a href="about-us.html">Benefits</a></li>
-                    <li><a href="elements.html">Developers</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Follow Us</h4>
-                <ul class="nav">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Google+</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Contact Us</h4>
-                <ul class="nav">
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Headquarters</a></li>
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Customer Service</h4>
-                <ul class="nav">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Delivery Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-        <!--/row-->
-        <p class="text-right">©2015</p>
-    </div>
+<footer class="w3-container-center w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
-
-<div class="scroll-up">
-    <a href="#"><i class="fa fa-angle-up"></i></a>
-</div>
-
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
-            </div>
-            <div class="modal-body row">
-                <h6 class="text-center">COMPLETE THESE FIELDS TO SIGN UP</h6>
-                <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-                    <div class="form-group">
-                        <input type="text" class="form-control input-lg" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control input-lg" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
-            </div>
-        </div>
-    </div>
-</div>
-<!--scripts loaded here-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
 
 </body>
 </html>
+

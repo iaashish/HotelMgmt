@@ -40,3 +40,13 @@ Route::post('/registerstaff','manager\managerController@registerStaff');
 
 Route::get('/booking' , 'BookingController@index');
 Route::post('/registerbooking' , 'BookingController@registerbooking');
+
+
+Route::get('manageraddstaff', function () {
+    return view('manager/manageraddstaff');
+});
+
+
+Route::get('managermange', function () {
+    return view('manager/managermange');
+});

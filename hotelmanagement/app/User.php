@@ -31,4 +31,8 @@ class User extends Authenticatable
     function number_of_users () {
         return User::all()->count; 
     }
+
+    function exists() {
+            return 'true';
+    }
 }

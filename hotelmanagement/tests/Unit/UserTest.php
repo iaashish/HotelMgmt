@@ -13,47 +13,52 @@ use Illuminate\Http\Response;
 
 class UserTest extends TestCase
 {
-    use DatabaseTransactions;
+	public function testAddUsers()
+	{
 
-    /*
-     * Test to check if sample users are created
-     *
-     */
-    public function testLoadSampleUsers()
-    {
-        $user = factory(User::class, 3)->create(['name' => 'software']);
+        $size = User::count();
+        $user = factory(User::class)->create();
+        //$user->save();
+		//$user = factory(User::class, 3)->create(['name' => 'software']);
+        $newSize = User::count();
+		//$all = User::all();
+
+		$this->assertEquals(($size + 1), $newSize);
+	}
+
+	public function testLoadSampleUsers()
+	{
+
+		$user = factory(User::class, 3)->create(['name' => 'software']);
 
         $all = User::all();
 
         $this->assertEquals(3, $all->count());
     }
 
-    /*
-     * Test to check if the user has been deleted from database
-     * this test should fail
+
+    /**
+     * A basic test example.
      *
+     * @return void
      */
-
-//  /*  public function testDeleteUser()
-//    {
-//        factory(User::class, 3)->create();
-//
-//        $user = User::find(1);
-//
-//        $username = $user->name;
-//
-//        $user->delete();
-//
-//        $this->assertDatabaseHas('users', [$username]);
-//    }*/
-
-
-    public function testApplication()
+    public function testExample()
     {
-        $user = new User(array('name' => 'hello user','email'=>'superadministrator@app.com','password'=>'password'));
-        $this->be($user);
-        $response = $this->call('GET', 'home');
-        $response->assertStatus(200);//200 success
+         $this->assertDatabaseHas('users', [
+        'name' => 'software'
+    ]);
+    }
+
+
+    public function testDeleteUser()
+    {
+
+        $user = User::where('name', 'software');
+
+        $user->delete();
+
+        $this->assertDatabaseMissing('users', ['name' => 'software']);
+
 
     }
 }
