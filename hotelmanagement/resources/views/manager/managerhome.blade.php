@@ -56,7 +56,6 @@
 </nav>
 
 
-
 <section class="container-fluid" id="section1">
     @include('staff.stafflist')
 
