@@ -6,6 +6,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use App\User;
+use App\Staff;
 class ManagerLoginTest extends DuskTestCase
 {
     /**
@@ -53,6 +54,9 @@ class ManagerLoginTest extends DuskTestCase
                     ->assertInputValue('#ssn', '4444')
                     ->select('#staff_type', 'Accountant')
                     ->clickLink('Register');
+
+                    $staff = Staff::where('first', 'Joe');
+                    $staff->delete();
         });
     }
 }
