@@ -5,6 +5,7 @@
     <title>Mange Staff</title>
 
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
    
 
 
@@ -13,11 +14,27 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
      
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
 
+<style>
+
+body {
+    background: url('picture/lobby.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+    
+    
+}
+</style>
 
 
 
@@ -27,7 +44,7 @@
 <div class="w3">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="/" class="w3-bar-item w3-button w3-padding-large">Bakc</a>
+    <a href="/managerhome" class="w3-bar-item w3-button w3-padding-large">Bakc</a>
   
       </div>
   
