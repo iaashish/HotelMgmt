@@ -19,6 +19,10 @@ Route::get('about', function () {
     return view('about');
 });
 
+Route::get('/loginmanger', function () {
+    return view('loginmanger');
+});
+
 
 Auth::routes();
 // Route::get('/stafflogin', function(){
@@ -50,3 +54,4 @@ Route::get('manageraddstaff', function () {
 Route::get('managermange', function () {
     return view('manager/managermange');
 });
+

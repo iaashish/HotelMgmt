@@ -6,6 +6,16 @@ html,body {
     background-size: cover;
     color:#444;
     font-family: 'Lato', sans-serif;
+    
+    
+}
+
+body {
+    background: url('picture/lobby.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+    
+    
 }
 
 @media (min-width:768px) {
@@ -58,8 +68,10 @@ a:hover {
 }
 
 .navbar-trans .navbar-brand, .navbar-trans >.container-fluid .navbar-brand {
+ 
     padding: 14px;
     color:#f44d3c;
+    
 }
 
 .navbar-trans li>a:focus,.navbar-trans li.active {
@@ -121,15 +133,7 @@ a:hover {
   line-height: 30px;
 }
 
-section {
-	padding-top:70px;  
-    padding-bottom:50px;
-    min-height:100%;
-    min-height:calc(100% - 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
+
 
 @media (min-width:768px) {
     .v-center {
@@ -141,47 +145,20 @@ section {
     }
 }
   
-#section1, #section3 {
+#section1 {
 	background-color: rgba(0,0,0,0.4);
 	color:#0c1b03;
 	font-family: 'Bitter', serif;
 }
   
-#section4 {
-	background-color: #f6f6f6;
-	color:#444;
-}
+
   
-#section2 {
-	background-color: #fff;
-}
 
-#section3 {
-	background-color: rgba(0,0,0,0.9);
-}
 
-#section5 {
-	background-color: #fff;
-}
-
-#section6 {
-    background-color: #eee;
-	min-height:130px;
-	padding-top:40px;
-	padding-bottom:40px;
-}
-
-#section7 {
-	background-color: #f44d3c;
-	color: #f6f6f6;
-	min-height:130px;
-	padding-top:40px;
-	padding-bottom:40px;
-}
 
 footer {
 	background-color:#2b2b2b;
-    color:#ddd;
+    color:rgb(73, 41, 41);
     min-height:100px;
     padding-top:20px;
     padding-bottom:40px;

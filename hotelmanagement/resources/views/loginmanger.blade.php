@@ -1,9 +1,9 @@
-<script src="{{ asset('js/app.js') }}"></script>
-<link rel="stylesheet" href="{{asset('css/styles.css')}}">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="{{ asset('js/app.js') }}"></script>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container">
     <div class="row">
@@ -13,7 +13,7 @@
             <div class=" w3-opacity w3-light-grey w3-xlarge">
 
             
-                <h2 class="w3-wide w3-center">staff  Login Page</h2>
+                <h2 class="w3-wide w3-center">Manager Login Page</h2>
                 <p class="w3-wide w3-center"><i>If you have problem in login, please contact us!</i>
                 </p>
                 <p class="w3-opacity w3-center">
@@ -79,6 +79,5 @@
             </div>
         </div>
     </div>
-
 
 @extends('layouts/footer')
