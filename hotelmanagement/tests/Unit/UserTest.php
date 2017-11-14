@@ -27,9 +27,11 @@ class UserTest extends TestCase
 
 		$user = factory(User::class, 3)->create(['name' => 'software']);
 
-		$all = User::all();
-
-		$this->assertEquals($all, $all);
+        $all = User::all();
+        $size1 = sizeof($all);
+        $size2 = User::count();
+    
+        $this->assertEquals($size1, $size2);
 	}
 
 

@@ -27,9 +27,11 @@ class StaffTest extends TestCase
 
 		$staff = factory(Staff::class, 3)->create(['first' => 'Charlize']);
 
-		$all = Staff::all();
-
-		$this->assertEquals($all, $all);
+        $all = Staff::all();
+        $size1 = sizeof($all);
+        $size2 = Staff::count();
+    
+        $this->assertEquals($size1, $size2);
 	}
 
 

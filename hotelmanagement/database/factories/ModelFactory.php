@@ -3,6 +3,8 @@
 
 use Faker\Generator as Faker;
 use App\User;
+use App\Booking;
+use App\Guest;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,38 @@ $factory->define(App\Admin::class, function (Faker $faker) {
         'job_title' => $faker->jobTitle,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10)
+        
+    ];
+});
+
+$factory->define(App\Guest::class, function (Faker $faker) {
+   
+    return [
+
+        'first' => $faker->firstname,
+        'last' => $faker->lastname,
+        'email' => $faker->unique()->safeEmail,
+        'address' => $faker->address
+        
+    ];
+});
+
+$factory->define(App\Booking::class, function (Faker $faker) {
+
+   // static $email;
+    //$guest = factory(\App\Guest::class)->create();
+    
+    return [
+
+
+        //'name' => $faker->name,
+        'email' => $faker->email,
+        //'email' => $email,
+        'checkin' => $faker->date,
+        'checkout' => $faker->date,
+        'payment' => $faker->unique()->string,
+        
+  
         
     ];
 });
