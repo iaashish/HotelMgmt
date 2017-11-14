@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +13,7 @@
      
      
      
+      <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -22,17 +22,20 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
-<body>
 
+<br>
 <!-- Navbar -->
-<div class="w3-top">
+<div class="w3-top ">
   <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
+<body>
+
+<br>
 
 <!-- Image Banner -->
 <div class="w3-container w3-bar w3-black w3-card">
@@ -40,6 +43,98 @@ body {font-family: "Lato", sans-serif}
   
 </div>
 
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="/picture/staffprofile.png" style="width:50%" alt="ManagerPicture">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+          
+          </div>
+        </div>
+        <div class="w3-container">
+
+        <hr>
+           <u>         <h4>Personal Informationa:</h4> </u>
+          
+           <p><i class="fa fa-fw fa-envelope"></i> Jim@gmail.com</p>
+
+          <p><i class="fa fa-fw fa-phone"></i> 1029384756</p>
+        <p>
+            <hr>
+                <u>  <h4>Bank account Information</h4></u>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex info</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card info</p>
+        <hr>
+        <address>
+       <u> <strong> <i class="fa fa-fw fa-map-marker"></i> Address</strong></u>
+                    <br>
+                    215 Republic Ave, Apt 5306<br>
+                    Lafayette, LA 70508<br>
+                    P: (123) 456-7890
+                </address>
+          <hr>
+
+        
+          
+          <br>
+
+          <form method="POST" action="/registerbooking">
+      {{ csrf_field() }}
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Check In</label>
+            <input input id="checkin" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkin" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-calendar-o"></i> Check Out</label>
+            <input id="checkout" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkout" required>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label>First Name</label>
+            <input id="first" class="w3-input w3-border" type="text" name="first">
+            <label>Last Name</label>
+            <input id="last" class="w3-input w3-border" type="text" name="last">
+          </div>
+          <div class="w3-half">
+            <label><i></i>Email</label>
+          <input id="email" class="w3-input w3-border" type="text" name="email">
+          </div>
+        </div>
+        <button class="w3-button w3-dark-grey "  type="submit">
+          <i class="fa fa-search w3-margin-center "></i> Search availability</button>
+        <input type="submit" name="submit">
+        
+
+      </form>
+      <br>
+        </div>
+        
+      </div>
+      
+      
+      
+      
+
+    <!-- End Left Column -->
+    </div>
+
+    
+       
+     <!-- Right Column -->
+     <div class="w3-twothird">
 <!-- Page content -->
 <div class="w3-content" style="max-width:1000px;margin-top:46px">
 
@@ -107,8 +202,8 @@ body {font-family: "Lato", sans-serif}
 <br></br>
 <p><center>Input Guests to Update Table<center></p>
   <!-- Guest Input Form -->
-  <div class="w3-card-4" style="max-width:500px;margin-top:46px;margin-bottom:46px; margin-right:300px; margin-left:300px;" align = "center">
-  <div class="w3-container w3-black" style="max-width:500px;margin-top:46px;margin-bottom:46px" align = "center">
+  <div class="w3-card-4" style="max-width:700px;margin-top:46px;margin-bottom:46px; margin-right:400px; margin-right:100px;" align = "center">
+  <div class="w3-container w3-black" style="max-width:700px;margin-top:46px;margin-bottom:46px" align = "center">
   
     <h4><center>Guest Input</center></h4>
   </div>
@@ -124,12 +219,14 @@ body {font-family: "Lato", sans-serif}
   </form>
 </div>
 
- 
+
+
+
+
 
   
 <!-- End Page Content -->
 </div>
-
 
 
 <!-- Footer -->
