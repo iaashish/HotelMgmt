@@ -30,7 +30,8 @@ class ManagerLoginTest extends DuskTestCase
                     ->type('email', 'Brennan@gmail.com')
                     ->type('password', '123456')
                     ->press('Login')
-                    ->assertPathIs('/home');
+                    ->assertPathIs('/home')
+                    ->clickLink('Logout');
                 });
             }
         }

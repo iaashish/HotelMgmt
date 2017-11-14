@@ -30,7 +30,7 @@ class ManagerMakeStaffTest extends DuskTestCase
                     ->type('email', 'Brennan@gmail.com')
                     ->type('password', '123456')
                     ->press('Login')
-                    ->assertPathIs('/managerhome')
+                    ->assertPathIs('/home')
                     ->clickLink('Staff')
                     ->assertPathIs('/manageraddstaff')
                     // now register a staff and check 
@@ -54,7 +54,8 @@ class ManagerMakeStaffTest extends DuskTestCase
                     ->value('#ssn','4444')
                     ->assertInputValue('#ssn', '4444')
                     ->select('#staff_type', 'Accountant')
-                    ->clickLink('Register');
+                    ->clickLink('Register')
+                    ->visit('/logout');
                     //staff should exist and can be deleted from database
                     $staff = Staff::where('first', 'Joe');
                     $staff->delete();
