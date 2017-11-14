@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\User;
 
 class StaffRegistrationTest extends TestCase
 {
@@ -28,14 +29,33 @@ class StaffRegistrationTest extends TestCase
      */
     public function testRegisterStaff()
     {
-        User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
+        User::Create(['name' => 'Brennan', 'email' => 'Brennan@gmail.com', 'password' => bcrypt('123456')]);
         $credentials = [
-            'email' => 'admin1@admin1.com',
-            'password' => 'admin'
+            'email' => 'Brennan@gmail.com',
+            'password' => '123456'
         ];
         $response = $this->call('POST', '/login', $credentials);
-        $response->assertStatus(302);
+        //$response->assertStatus(302);
         $response1 = $this->call('GET', '/managerhome');
         $response1->assertSee('Hotel Management System');
+        // go to create staff page and make a staff
+        $response2 = $this->call('GET', '/manageraddstaff');
+        $response2->assertSee('Register');
+        // credentials for staff
+        $credentials2 = [
+            '#first'=>'Joe',
+            '#last'=>'Schmo',
+            '#email'=>'JoeSchmo@gmail.com',
+            '#password'=>'123456',
+            '#password-confirm'=>'123456',
+            '#address'=>'123 Joe Street',
+            '#phonenumber'=>'1-800-SCHMO',
+            '#dob'=> '1990-01-01',
+            '#dateofhire'=>'2020-01-01',                 
+            '#ssn'=>'4444',
+            '#staff_type'=>'Accountant'
+        ];
+        $response3 = $this->call('POST', '/manageraddstaff', $credentials2);
+        //$response3->assertStatus(302);
     }
 }

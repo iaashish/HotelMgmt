@@ -16,12 +16,12 @@ class ManagerLoginTest extends DuskTestCase
      */
     public function testManagerLogin()
     {
-        // $user = factory(User::class)->create([
-        //     // 'name' => 'Joe',
-        //     // 'email' => 'Joe@Joe.com',
-        //     // 'password' => '123456',
+        $user = factory(User::class)->create([
+            'name' => 'Brennan',
+            'email' => 'Brennan@gmail.com',
+            'password' => '123456',
             
-        // ]);
+        ]);
 
         $this->browse(function (Browser $browser) {
             
