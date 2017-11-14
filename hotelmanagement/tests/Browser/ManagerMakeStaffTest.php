@@ -16,21 +16,22 @@ class ManagerMakeStaffTest extends DuskTestCase
      */
     public function testManagerMakeStaff()
     {
-        // $user = factory(User::class)->create([
-        //     // 'name' => 'Joe',
-        //     // 'email' => 'Joe@Joe.com',
-        //     // 'password' => '123456',
+        $user = factory(User::class)->create([
+            'name' => 'Joe',
+            'email' => 'Brennan@gmail.com',
+            'password' => '123456',
             
-        // ]);
+        ]);
 
         $this->browse(function (Browser $browser) {
             
-            $browser->visit('/')
+            $browser->visit('/logout')
+                    ->visit('/')
                     ->clickLink('Manager Login')
                     ->type('email', 'Brennan@gmail.com')
                     ->type('password', '123456')
                     ->press('Login')
-                    ->assertPathIs('/home')
+                    ->waitForLocation('/home',10)
                     ->clickLink('Staff')
                     ->assertPathIs('/manageraddstaff')
                     // now register a staff and check 
@@ -55,7 +56,8 @@ class ManagerMakeStaffTest extends DuskTestCase
                     ->assertInputValue('#ssn', '4444')
                     ->select('#staff_type', 'Accountant')
                     ->clickLink('Register')
-                    ->visit('/logout');
+                    ->clickLink('Bakc')
+                    ->clickLink('Logout');
                     //staff should exist and can be deleted from database
                     $staff = Staff::where('first', 'Joe');
                     $staff->delete();
