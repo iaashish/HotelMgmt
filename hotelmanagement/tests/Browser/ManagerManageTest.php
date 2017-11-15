@@ -25,10 +25,11 @@ class ManagerManageTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             //create a staff to mess with
-            $user = factory(Staff::class)->create([
+            Staff::create([
                 'first'=>'Test',		
                 'last'=>'McGee',
                 'email'=>'Test@gmail.com',	
+                'password' => '123456',
                 'dob' => '1990-11-14',
                 'dateofhire' => '2017-11-14',
                 'ssn'=>'4444444',
