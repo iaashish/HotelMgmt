@@ -29,29 +29,19 @@ Auth::routes();
 // 	return view('stafflogin');
 // });
 
-Route::get('/home', 'manager\managerController@index')->name('managerhome');
+Route::get('/home', 'manager\ManagerController@index')->name('managerhome');
 Route::get('/admin', 'AdminController@index');
 Route::get('/stafflogin', 'StaffLoginController@showLoginForm');
-
 Route::post('stafflogin', 'StaffLoginController@login');
 Route::post('stafflogout', 'StaffLoginController@logout');
 Route::get('staffhome',  'staff\staffcontroller@showhomepage');
-
-
 Route::resource('managers', 'ManagersController');
-Route::get('/managerhome', 'manager\managerController@index');
-Route::post('/registerstaff','manager\managerController@registerStaff');
-
+Route::get('/managerhome', 'manager\ManagerController@index');
+Route::post('/registerstaff','manager\ManagerController@registerStaff');
 Route::get('/booking' , 'BookingController@index');
 Route::post('/registerbooking' , 'BookingController@registerbooking');
-
-
-Route::get('manageraddstaff', function () {
-    return view('manager/manageraddstaff');
-});
-
-
-Route::get('managermange', function () {
-    return view('manager/managermange');
-});
+Route::get('manageraddstaff', 'manager\ManagerController@addstaff');
+Route::get('managermange', 'manager\ManagerController@managestaff');
+Route::post('/deletestaff', 'staff\StaffEditController@destroy');
+Route::resource('tasks','TaskController');
 

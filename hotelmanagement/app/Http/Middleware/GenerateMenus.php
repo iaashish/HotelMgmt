@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Lavary\Menu\Menu;
 
 class GenerateMenus
 {
@@ -15,6 +16,8 @@ class GenerateMenus
      */
     public function handle($request, Closure $next)
     {
+
+
         \Menu::make('MyNavBar', function ($menu) {
         $menu->add('Home' ,'#home',['class' => 'active', 'id' => 'home']);
         $menu->add('About',['url' => 'managerhome#about']);

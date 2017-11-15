@@ -37,7 +37,7 @@ $factory->define(App\Staff::class, function (Faker $faker) {
         'ssn' => $faker->randomNumber,
         'address' => $faker->unique()->address,
         'phonenumber' => $faker->unique()->phoneNumber,
-        'staff_type' => 'Receptionist',
+        'staff_type' => $faker->randomElement(['Receptionist', 'Accountant', 'Maintenance']),
         'password' => $password ?: $password = bcrypt('123456'),
         //can ignore happinessLevel since we defaulted it to 0
     ];

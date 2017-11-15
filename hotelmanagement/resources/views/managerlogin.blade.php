@@ -31,7 +31,7 @@ a{color:inherit;text-decoration:none}
 	padding:90px 70px 50px 70px;
 	background:rgba(40,57,101,.1);
 }
-.login-html .sign-in-htm,
+.login-html .sign-in-htm
 {
 	top:0;
 	left:0;
@@ -63,7 +63,7 @@ a{color:inherit;text-decoration:none}
 	display:inline-block;
 	border-bottom:2px solid transparent;
 }
-.login-html .sign-in:checked + .tab,
+.login-html .sign-in:checked + .tab
 {
 	color:#fff;
 	border-color:#1161ee;

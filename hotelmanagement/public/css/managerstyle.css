@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-    background: url('picture/lobby.jpg') no-repeat fixed center center;
+    background: url('/picture/lobby.jpg') no-repeat fixed center center;
     background-size: cover;
     font-family: Montserrat;
     
@@ -174,3 +174,12 @@ footer .nav>li>a:hover {
 	color:#fff;
 }
 
+.classnamehome{
+     background-color: brown;
+ }
+.classnameaddstaff{
+    background-color: brown;
+}
+.classnamemanagestaff{
+    background-color: brown;
+}

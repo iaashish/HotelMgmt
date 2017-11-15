@@ -24,9 +24,7 @@ class StaffLoginTest extends TestCase
 
     public function testNavigateToStaffLogin()
     {
-
         $response = $this->call('GET', 'login');
-
         $this->assertTrue($response->isOk());
     }
 
@@ -38,9 +36,7 @@ class StaffLoginTest extends TestCase
     public function testStaffHomeIfNotLoggedIn()
     {
         $request = $this->call('GET', '/staffhome');
-
         $request->assertStatus(302);//302 redirect
-
         $request->assertRedirect('/stafflogin');
     }
 
