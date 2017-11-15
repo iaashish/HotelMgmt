@@ -16,7 +16,7 @@ class StaffRegistrationTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testOnlyManagerCanAddStaff()
     {
         $this->assertTrue(true);
     }
@@ -26,8 +26,37 @@ class StaffRegistrationTest extends TestCase
      *
      *
      */
-    public function testRegisterStaff()
+    public function testRegisterNewStaff()
     {
+        User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
+        $credentials = [
+            'email' => 'admin1@admin1.com',
+            'password' => 'admin'
+        ];
+        $response = $this->call('POST', '/login', $credentials);
+        
 
+
+        $staff = factory(Staff::class)->make();        
+        $newstaffinfo = [
+            'first' => $staff->first, 
+            'last' => $staff->last,
+            'email' => $staff->email,
+            'password' => $staff->password,
+            'password_confirmation' => $staff->password,
+            'dob' => $staff->dob,
+            'dateofhire' => $staff->dateofhire,
+            'ssn'=> $staff->ssn,
+            'address'=> $staff->address,
+            'phonenumber'=> $staff->phonenumber,
+            'staff_type' => 'Receptionist'
+
+        ];
+        $response1 = $this->call('GET', '/manageraddstaff');
+        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo);
+
+        $response2->assertSee('Hotel Management System');
     }
+
+ 
 }

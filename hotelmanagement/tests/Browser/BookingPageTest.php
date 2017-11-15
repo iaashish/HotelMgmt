@@ -42,6 +42,6 @@ class BookingPageTest extends DuskTestCase
                     ->assertPathIs('/registerbooking');
                     $booking = Booking::where('first', 'Joe');
                     $booking->delete();
-                });
+                })]);
     }
 }
