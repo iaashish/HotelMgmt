@@ -53,21 +53,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="task" class="col-md-4 control-label">Tasks </label>
+
+
                                 <div class="col-md-6">
-                                    <select title="select type" class="form-control">
-                                        <option selected="true" disabled="disabled" placeholder="Choose Staff Type">
-                                            Choose Staff Type
-                                        </option>
-                                        @foreach ($data as $object )
-                                            <option>{{$object}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="endtime" class="col-md-4 control-label"></label>
-                                <div class="col-md-6">
-                                    <select title="select" class="form-control" name="task">
+                                    <select id="task" title="select" class="form-control" name="task">
                                         <option> Main Lobby: Reservations & Direct</option>
                                         <option> Main Lobby: Maintains telecommunication system
                                         </option>
