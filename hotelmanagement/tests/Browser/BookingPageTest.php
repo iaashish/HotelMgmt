@@ -18,11 +18,11 @@ class BookingPageTest extends DuskTestCase
     public function testBookingLogin()
     {
         $user = factory(User::class)->create([
-            //     // 'name' => 'Joe',
-            //     // 'email' => 'Joe@Joe.com',
-            //     // 'password' => '123456',
-
-            // ]);
+        //     // 'name' => 'Joe',
+        //     // 'email' => 'Joe@Joe.com',
+        //     // 'password' => '123456',
+            
+         ]);
 
             $this->browse(function (Browser $browser) {
 

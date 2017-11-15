@@ -6,7 +6,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use App\User;
-class RegisterTest extends DuskTestCase
+class GenericRegisterTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
@@ -40,6 +40,7 @@ class RegisterTest extends DuskTestCase
                     ->assertPathIs('/home');
 
                     //->assertSee("You are logged in!");
+                    //manager
                    $user = User::where('name', 'Joe10');
                    $user->delete();
         });

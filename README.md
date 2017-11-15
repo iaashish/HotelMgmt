@@ -1,6 +1,11 @@
 # README #
 #test
 
+Before running tests run
+
+php artisan config:clear
+composer dump-autoload
+
 FOR RUNNING PHPUNIT:
 
 ./vendor/bin/phpunit
