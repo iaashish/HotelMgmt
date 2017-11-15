@@ -71,7 +71,7 @@ body {
                         <label for="address" class="col-md-4 control-label">Staff Type</label>
                         <div class="col-md-6">
 
-                          <select class="form-control" name="item_id">
+                          <select class="form-control" name="staff_type">
                           <option value="0"></option>
                           <option value="receptionist">Receptionist</option>
                           <option value="maintenance">Maintenance Staff</option>
@@ -85,7 +85,7 @@ body {
                         <label for="address" class="col-md-4 control-label">Staff name</label>
                         <div class="col-md-6">
 
-                          <select class="form-control" name="item_id">
+                          <select class="form-control" name="staff_name">
                               <option value="staffname">Pull list of names fronm database </option>
                           </select>
                         </div>
@@ -103,7 +103,7 @@ body {
                             <label for="starttime" class="col-md-4 control-label">Start Time </label>
 
                             <div class="col-md-6">
-                                <input id="starttime" type="time" class="form-control" name="start stime">
+                                <input id="starttime" type="time" class="form-control" name="start_time">
                             </div>
                         </div>
 
@@ -112,7 +112,7 @@ body {
                             <label for="endtime" class="col-md-4 control-label">End Time </label>
 
                             <div class="col-md-6">
-                                <input id="endtime" type="time" class="form-control" name="endtime">
+                                <input id="endtime" type="time" class="form-control" name="end_time">
                             </div>
                         </div>
                                   

@@ -21,7 +21,7 @@ class BookingPageTest extends DuskTestCase
         //     // 'email' => 'Joe@Joe.com',
         //     // 'password' => '123456',
             
-        // ]);
+         ]);
 
         $this->browse(function (Browser $browser) {
             
