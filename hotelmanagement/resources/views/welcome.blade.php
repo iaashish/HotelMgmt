@@ -83,9 +83,10 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-third">
        
         <a href="{{route('login')}}"> Manager Login </a>
-        <a href="/loginmanger">  Login </a>
+        
+        <!-- <a href="/loginmanger">  Login </a> -->
 
-        <img src="/picture/managr.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <img src="/picture/managr.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:62%">
       </div>
 
 

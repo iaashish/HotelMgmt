@@ -35,11 +35,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-danger" href="#">Hotel Management System</a>
+            <a class="navbar-brand text-danger" href="/">Hotel Management System</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
-                <li class="nav-item"><a class="" href="/home">Home</a>
+                <li class="nav-item"><a class="" href="/staffhome">Home</a>
                 </li>
 
             </ul>
