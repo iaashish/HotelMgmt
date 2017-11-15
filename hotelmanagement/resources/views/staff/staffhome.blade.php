@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,6 @@
      
      
      
-      <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -21,27 +21,26 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-</style>
 
-<br>
+body{
+
+    background: url('picture/lobby.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+}
+</style>
+<body>
+
 <!-- Navbar -->
-<div class="w3-top ">
+<div class="w3-top">
   <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
-<body>
 
-<br>
-
-<!-- Image Banner -->
-<div class="w3-container w3-bar w3-black w3-card">
-  <img src="picture/p4.jpg" alt="Hallway" class="w3-image" width="1920" height="600">
-  
-</div>
 
 
 <body class="w3-light-grey">
@@ -51,17 +50,20 @@ body {font-family: "Lato", sans-serif}
 
   <!-- The Grid -->
   <div class="w3-row-padding">
-  
+  <br>
+        <br>
     <!-- Left Column -->
-    <div class="w3-third">
+    <div class="w3-third  w3-opacity-min w3-dark-grey">
     
-      <div class="w3-white w3-text-grey w3-card-4">
+      <div class="w3-white w3-text-black w3-card-4">
         <div class="w3-display-container">
           <img src="/picture/staffprofile.png" style="width:50%" alt="ManagerPicture">
           <div class="w3-display-bottomleft w3-container w3-text-black">
           
           </div>
         </div>
+
+       
         <div class="w3-container">
 
         <hr>
@@ -85,8 +87,9 @@ body {font-family: "Lato", sans-serif}
                 </address>
           <hr>
 
-        
           
+
+          <hr>
           <br>
 
           <form method="POST" action="/registerbooking">
@@ -113,28 +116,21 @@ body {font-family: "Lato", sans-serif}
           <input id="email" class="w3-input w3-border" type="text" name="email">
           </div>
         </div>
-        <button class="w3-button w3-dark-grey "  type="submit">
-          <i class="fa fa-search w3-margin-center "></i> Search availability</button>
         <input type="submit" name="submit">
-        
-
+        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
       </form>
       <br>
+      <hr>
         </div>
         
       </div>
       
       
-      
-      
-
     <!-- End Left Column -->
     </div>
 
-    
-       
      <!-- Right Column -->
-     <div class="w3-twothird">
+     <div class="w3-twothird  w3-opacity-min w3-grey">
 <!-- Page content -->
 <div class="w3-content" style="max-width:1000px;margin-top:46px">
 
@@ -145,7 +141,7 @@ body {font-family: "Lato", sans-serif}
   <h2><center>Staff Homepage</center></h2>
   <p><center>Table to Monitor Guest Information<center></p>
 
-  <table class="w3-table-all w3-card">
+  <table class="w3-table-all  ">
     <thead>
       <tr class="w3-black">
         <th>First Name</th>
@@ -202,15 +198,15 @@ body {font-family: "Lato", sans-serif}
 <br></br>
 <p><center>Input Guests to Update Table<center></p>
   <!-- Guest Input Form -->
-  <div class="w3-card-4" style="max-width:700px;margin-top:46px;margin-bottom:46px; margin-right:400px; margin-right:100px;" align = "center">
-  <div class="w3-container w3-black" style="max-width:700px;margin-top:46px;margin-bottom:46px" align = "center">
+  <div class="w3-card-4 w3-white" style="max-width:700px;margin-top:46px;margin-bottom:46px; margin-right:600px; margin-right:100px;" align = "center">
+  <div class="w3-container  w3-black" style="max-width:700px;margin-top:46px;margin-bottom:46px" align = "center">
   
     <h4><center>Guest Input</center></h4>
   </div>
-  <form class="w3-container" action="/action_page.php">
+  <form class="w3-container w3-" action="/action_page.php">
     <p>      
     <label class="w3-text-black"><b>First Name</b></label>
-    <input class="w3-input w3-border w3-sand" id= "first" name="first" type="text"></p>
+    <input class="w3-input w3-border  w3-sand" id= "first" name="first" type="text"></p>
     <p>      
     <label class="w3-text-black"><b>Last Name</b></label>
     <input class="w3-input w3-border w3-sand" id="last" name="last" type="text"></p>
@@ -218,8 +214,6 @@ body {font-family: "Lato", sans-serif}
     <button class="w3-btn w3-black">Register</button></p>
   </form>
 </div>
-
-
 
 
 

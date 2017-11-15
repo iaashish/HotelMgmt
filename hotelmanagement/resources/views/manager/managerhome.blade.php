@@ -16,6 +16,14 @@
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+body{
+
+    background: url('picture/lobby.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+
+}
 </style>
 
 
@@ -55,6 +63,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </div>
 </nav>
 
+<br>
+<br>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
@@ -64,9 +74,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <div class="w3-row-padding">
   
     <!-- Left Column -->
-    <div class="w3-third">
+    <div class="w3-third  w3-opacity-min w3-dark-grey ">
     
-      <div class="w3-white w3-text-grey w3-card-4">
+      <div class="w3-white w3-text-black w3-card-4">
         <div class="w3-display-container">
           <img src="/picture/mang.png" style="width:50%" alt="ManagerPicture">
           <div class="w3-display-bottomleft w3-container w3-text-black">
@@ -97,7 +107,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
 
           
-
+<br>
           
           <br>
         </div>
@@ -107,12 +117,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </div>
 
     <!-- Right Column -->
-    <div class="w3-twothird">
+    <div class="w3-twothird  w3-opacity-min w3-dark-grey">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current Staff</h2>
+        <h2 class="w3-text-black w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current Staff</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b> All Staff haired since: </b></h5>
+          <h5 class="w3-"><b> All Staff haired since: </b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
           <p></p>
           <hr>
@@ -127,7 +137,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity "><b>Staff member not found</b></h5>
+          <h5 class="w3-text-red "><b>Staff member not found</b></h5>
           <p>Cto add new staff member, please go to staff first and register the employee, then you can assign a task.</p>
           <a href="/manageraddstaff" class="w3-text-teal">Click here</a>
 
@@ -147,17 +157,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   
   <!-- End Page Container -->
 </div>
-<!-- Footer -->
+<br>
+<br><!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-<i class="fa fa-facebook-official w3-hover-opacity"></i>
-<i class="fa fa-instagram w3-hover-opacity"></i>
-<i class="fa fa-snapchat w3-hover-opacity"></i>
-<i class="fa fa-pinterest-p w3-hover-opacity"></i>
-<i class="fa fa-twitter w3-hover-opacity"></i>
-<i class="fa fa-linkedin w3-hover-opacity"></i>
-<p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
 </footer>
-
 </body>
 </html>
 
