@@ -14,7 +14,7 @@
                             <div class="col-md-6">
                                 <input id="first" type="text" placeholder="First name" class="form-control" name="first" value="{{ old('first') }}" required> @if ($errors->has('first'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('first') }}</strong>
+                                        <strong>{{ $errors->first('first name') }}</strong>
                                     </span> @endif
                             </div>
                         </div>

@@ -5,6 +5,10 @@ namespace Tests\Unit;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Staff;
+use App\User;
+
+
 
 class StaffRegistrationTest extends TestCase
 {
@@ -16,10 +20,17 @@ class StaffRegistrationTest extends TestCase
      *
      * @return void
      */
-    public function testOnlyManagerCanAddStaff()
-    {
-        $this->assertTrue(true);
-    }
+    // public function testOnlyManagerCanAddStaff()
+    // {
+        
+    //     //make without saving in the database
+
+    //     $response1 = $this->call('GET', '/manageraddstaff');
+    //     $response2 = $this->call('POST', '/registerstaff', $newstaffinfo);
+
+    //     $response2->assertSee('Hotel Management System');
+
+    // }
 
     /*
      * Test to register a staff
@@ -28,6 +39,8 @@ class StaffRegistrationTest extends TestCase
      */
     public function testRegisterNewStaff()
     {
+
+        $size = Staff::count();          
         User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
         $credentials = [
             'email' => 'admin1@admin1.com',
@@ -38,6 +51,7 @@ class StaffRegistrationTest extends TestCase
 
 
         $staff = factory(Staff::class)->make();        
+
         $newstaffinfo = [
             'first' => $staff->first, 
             'last' => $staff->last,
@@ -52,10 +66,14 @@ class StaffRegistrationTest extends TestCase
             'staff_type' => 'Receptionist'
 
         ];
+        
         $response1 = $this->call('GET', '/manageraddstaff');
-        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo);
+        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
 
-        $response2->assertSee('Hotel Management System');
+        ->assertRedirect('/managerhome');
+        $newSize = Staff::count();
+        //staff count should be incremented by 1
+		$this->assertEquals(($size + 1), $newSize);
     }
 
  
