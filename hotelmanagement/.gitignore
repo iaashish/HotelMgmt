@@ -13,4 +13,6 @@ yarn-error.log
 phpunit.xml
 .idea/workspace.xml
 workspace.xml
+.env.testing
+
 
