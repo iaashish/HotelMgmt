@@ -20,7 +20,6 @@ class Staff extends Authenticatable
     protected $table = 'staff';
 
 
-    
     /**
      * The attributes that are mass assignable.
      *
@@ -68,6 +67,20 @@ class Staff extends Authenticatable
     {
 
         return DB::table('staff')->paginate(5);
+    }
+
+    public function scopestaffnames()
+    {
+
+        $type = Staff::all();
+        $enum = array();
+        foreach ($type as $value) {
+            $enum[] = $value->first." ".$value->last;
+
+        }
+        return $type;
+
+
     }
 
 

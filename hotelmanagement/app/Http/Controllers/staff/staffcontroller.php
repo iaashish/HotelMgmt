@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\staff;
 
+use App\Booking;
 use App\Staff;
+use App\Task;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RedirectsUsers;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Permission;
 use Debugbar;
 use Spatie\Permission\Traits\HasRoles;
@@ -21,7 +24,12 @@ class staffcontroller extends Controller
     public function showhomepage()
     {
 
-        return view('staff.staffhome');
+        $data = Booking::all();
+        $tasks =  Task::where('staff_id',Auth::user()->id)->get();
+        Debugbar::info($data);
+        return view('staff.staffhome')->with('title', 'Staff Home page')
+            ->with('data', $data)
+            ->with('task', $tasks);
 
     }
 
@@ -29,7 +37,6 @@ class staffcontroller extends Controller
     {
         return view('staff.staffhome');
     }
-
 
     /**
      * Create a new controller instance.
@@ -41,35 +48,5 @@ class staffcontroller extends Controller
          $this->middleware('auth:staff');
      }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    /*    public function index()
-        {
-            return view('admin');
-        }*/
 
-
-/*    public function registerStaff(Request $request)
-    {
-        Debugbar:info($request);
-        $this->redirectTo = "/managerhome";
-        Staff::create([
-            'first' => $request->first,
-            'last' => $request->last,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'dateofhire' => $request->dateofhire,
-            'dob' => $request->dob,
-            'phonenumber' => $request->phonenumber,
-            'ssn' => $request->ssn,
-            'address' => $request->address,
-            'staff_type' => $request->staff_type,
-        ]);
-
-
-        return redirect('/managerhome');
-    }*/
 }

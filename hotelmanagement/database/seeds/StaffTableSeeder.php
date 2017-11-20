@@ -34,7 +34,7 @@ class StaffTableSeeder extends Seeder
 
         // create roles and assign existing permissions
 
-        $role = Role::create(['guard_name' => 'staff','name' => 'receptionist']);
+        $role = Role::create(['guard_name' => 'staff','name' => 'Receptionist']);
         $role->givePermissionTo('view booking information');
         $role->givePermissionTo('view room status');
         $role->givePermissionTo('view guest personal info');
