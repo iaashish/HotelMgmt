@@ -27,7 +27,7 @@ class managerController extends Controller
 public function registerStaff(Request $request)
     {
         Debugbar:info($request);
-        /*
+        
         $this->validate($request, [
             'first' =>'required',
             'last' => 'required',
@@ -40,7 +40,7 @@ public function registerStaff(Request $request)
             'address' => 'required',
             'staff_type' => 'required'
         ]);
-*/
+
         $this->redirectTo = "/managerhome";
         
         Staff::create([
