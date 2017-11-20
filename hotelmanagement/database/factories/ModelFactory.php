@@ -32,12 +32,12 @@ $factory->define(App\Staff::class, function (Faker $faker) {
         'first' => $faker->firstName,
         'last' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
-        'dob' => $faker->unique()->date,
-        'dateofhire' => $faker->unique()->date,
-        'ssn' => $faker->randomNumber,
-        'address' => $faker->unique()->address,
-        'phonenumber' => $faker->unique()->phoneNumber,
-        'staff_type' => $faker->randomElement(['Receptionist', 'Accountant', 'Maintenance']),
+        'dob' => $faker->date($format = 'Y-m-d', $max = '-18 years'),
+        'dateofhire' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'ssn' => $faker->unique()->randomNumber($nbDigits = 9, $strict = false),
+        'address' => $faker->address,
+        'phonenumber' => $faker->phoneNumber,
+        'staff_type' => 'Receptionist',
         'password' => $password ?: $password = bcrypt('123456'),
         //can ignore happinessLevel since we defaulted it to 0
     ];

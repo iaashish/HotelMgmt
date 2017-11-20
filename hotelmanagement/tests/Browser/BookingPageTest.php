@@ -41,8 +41,8 @@ class BookingPageTest extends DuskTestCase
                     ->value('#email', 'Joe@gmail.com')
                     ->click('button[type="submit"]')
                     ->assertPathIs('/registerbooking');
-                $booking = Booking::where('first', 'Joe');
-                $booking->delete();
-            })]);
+                    $booking = Booking::where('first', 'Joe');
+                    $booking->delete();
+                });
     }
 }

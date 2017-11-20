@@ -14,5 +14,5 @@ phpunit.xml
 .idea/workspace.xml
 workspace.xml
 .env.testing
-
+/tests/report/*
 
