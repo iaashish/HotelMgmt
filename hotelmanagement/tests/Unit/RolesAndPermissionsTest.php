@@ -10,13 +10,28 @@ use Spatie\Permission\Models\Permission;
 class RolesAndPermissionsTest extends TestCase
 {
     /**
-     * A basic test example.
+     * 
      *
      * @return void
      */
-    public function testExample()
+    public function testAccountant()
     {
 
+        //test to make sure Accountant can only access their page
+    }
+    public function testReceptionist()
+    {
 
+        //test to make sure Receptionist can only access their page
+    }
+    public function testMaintenance()
+    {
+
+        //test to make sure Maintenance can only access their page
+    }
+    public function testManager()
+    {
+
+        //test to make sure Manager can only access their page
     }
 }
