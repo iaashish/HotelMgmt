@@ -42,6 +42,8 @@ Route::get('/booking' , 'BookingController@index');
 Route::post('/registerbooking' , 'BookingController@registerbooking');
 Route::get('manageraddstaff', 'manager\ManagerController@addstaff');
 Route::get('managermange', 'manager\ManagerController@managestaff');
+Route::get('managerroles', 'manager\ManagerController@manageroles');
 Route::post('/deletestaff', 'staff\StaffEditController@destroy');
 Route::resource('tasks','TaskController');
-
+Route::post('/setroles', 'manager\ManagerController@assignRole');
+Route::get('getselectvalues/{val}', 'manager\ManagerController@changeDropDown');

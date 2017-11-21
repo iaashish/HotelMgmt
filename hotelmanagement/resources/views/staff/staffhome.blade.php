@@ -18,52 +18,61 @@
                     </div>
                     <div class="w3-container">
                         <hr>
-                        <u><h4>Personal Information:</h4></u>
-                        <p><i class="fa fa-fw fa-envelope"></i>{{Auth::user()->email}}</p>
-                        <p><i class="fa fa-fw fa-phone"></i> {{Auth::user()->phonenumber}}</p>
-                        <p>
-                        <hr>
-                        <u><h4>Bank account Information</h4></u>
-                        <p><i class="fa fa-fw fa-cc-amex"></i> Amex info</p>
-                        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card info</p>
-                        <hr>
-                        <address>
-                            <u> <strong> <i class="fa fa-fw fa-map-marker"></i> Address</strong></u>
+
+                        @role('receptionist')
+                        I am a writer!
+                        @else
+                            I am not a writer...
+                            @endrole
+                            <u><h4>Personal Information:</h4></u>
+                            <p><i class="fa fa-fw fa-envelope"></i>{{Auth::user()->email}}</p>
+                            <p><i class="fa fa-fw fa-phone"></i> {{Auth::user()->phonenumber}}</p>
+                            <p>
+                            <hr>
+                            <u><h4>Bank account Information</h4></u>
+                            <p><i class="fa fa-fw fa-cc-amex"></i> Amex info</p>
+                            <p><i class="fa fa-fw fa-credit-card"></i> Credit Card info</p>
+                            <hr>
+                            <address>
+                                <u> <strong> <i class="fa fa-fw fa-map-marker"></i> Address</strong></u>
+                                <br>
+                                {{Auth::user()->address}}
+                            </address>
+                            <hr>
+                            <hr>
                             <br>
-                            {{Auth::user()->address}}
-                        </address>
-                        <hr>
-                        <hr>
-                        <br>
-                        <form method="POST" action="/registerbooking">
-                            {{ csrf_field() }}
-                            <div class="w3-row-padding" style="margin:0 -16px;">
-                                <div class="w3-half w3-margin-bottom">
-                                    <label><i class="fa fa-calendar-o"></i> Check In</label>
-                                    <input input id="checkin" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkin" required>
+                            <form method="POST" action="/registerbooking">
+                                {{ csrf_field() }}
+                                <div class="w3-row-padding" style="margin:0 -16px;">
+                                    <div class="w3-half w3-margin-bottom">
+                                        <label><i class="fa fa-calendar-o"></i> Check In</label>
+                                        <input input id="checkin" class="w3-input w3-border" type="date"
+                                               placeholder="DD MM YYYY" name="checkin" required>
+                                    </div>
+                                    <div class="w3-half">
+                                        <label><i class="fa fa-calendar-o"></i> Check Out</label>
+                                        <input id="checkout" class="w3-input w3-border" type="date"
+                                               placeholder="DD MM YYYY" name="checkout" required>
+                                    </div>
                                 </div>
-                                <div class="w3-half">
-                                    <label><i class="fa fa-calendar-o"></i> Check Out</label>
-                                    <input id="checkout" class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="checkout" required>
+                                <div class="w3-row-padding" style="margin:8px -16px;">
+                                    <div class="w3-half w3-margin-bottom">
+                                        <label>First Name</label>
+                                        <input id="first" class="w3-input w3-border" type="text" name="first">
+                                        <label>Last Name</label>
+                                        <input id="last" class="w3-input w3-border" type="text" name="last">
+                                    </div>
+                                    <div class="w3-half">
+                                        <label><i></i>Email</label>
+                                        <input id="email" class="w3-input w3-border" type="text" name="email">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w3-row-padding" style="margin:8px -16px;">
-                                <div class="w3-half w3-margin-bottom">
-                                    <label>First Name</label>
-                                    <input id="first" class="w3-input w3-border" type="text" name="first">
-                                    <label>Last Name</label>
-                                    <input id="last" class="w3-input w3-border" type="text" name="last">
-                                </div>
-                                <div class="w3-half">
-                                    <label><i></i>Email</label>
-                                    <input id="email" class="w3-input w3-border" type="text" name="email">
-                                </div>
-                            </div>
-                            <button class="w3-button w3-dark-grey" type="submit"><i class=" w3-margin-right"></i> Reserve Room
-                            </button>
-                        </form>
-                        <br>
-                        <hr>
+                                <button class="w3-button w3-dark-grey" type="submit"><i class=" w3-margin-right"></i>
+                                    Reserve Room
+                                </button>
+                            </form>
+                            <br>
+                            <hr>
                     </div>
                 </div>
             </div>
@@ -102,7 +111,9 @@
                     </div>
                     <br>
                     <!-- Guest Input Form -->
-                    <div class="w3-card-4 w3-white" style="max-width:700px;margin-top:46px;margin-bottom:46px; margin: 0 auto; margin-right:600px; margin-right:100px;" align="center">
+                    <div class="w3-card-4 w3-white"
+                         style="max-width:700px;margin-top:46px;margin-bottom:46px; margin: 0 auto; margin-right:600px; margin-right:100px;"
+                         align="center">
                         <div class="w3-container  w3-black" style="max-width:700px;margin-top:46px;" align="center">
                             <h4>
                                 <center>You task for today</center>

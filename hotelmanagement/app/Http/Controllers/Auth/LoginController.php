@@ -31,7 +31,7 @@ public function showLoginForm()
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/managerhome';
 
 
 

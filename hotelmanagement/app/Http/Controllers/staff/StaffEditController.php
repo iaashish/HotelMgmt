@@ -86,7 +86,7 @@ class StaffEditController extends Controller
     {
         $staff = Staff::find($request->id);
         $staff->delete();
-        return redirect('/home');
+        return redirect('/managerhome');
 
 
     }
