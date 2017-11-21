@@ -92,7 +92,7 @@ return [
         ],
         'mysql_testing' => [
             'driver'    => 'mysql',
-            'host'      => env('TESTING_DB_HOST', 'localhost'),
+            'host'      => env('TESTING_DB_HOST', '127.0.0.1'),
             'database'  => env('TESTING_DB_DATABASE', 'laravel'),
             'username'  => env('TESTING_DB_USERNAME', 'root'),
             'password'  => env('TESTING_DB_PASSWORD', ''),
