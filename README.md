@@ -1,97 +1,85 @@
-# README #
-#test
+Hotel Management System
+------------------------
+Hotel Management system designed to manage hotel staff and displays all series for tier employers easily. in manager page, we can manage staff and modify their information, and staff can be assigned based on different rules, different tasks. Defined the Accountant page in order to display the process of stipend and connect into staff database. Using Laravel Framework to built the system and test each component
+For a full description of the project, or to submit bug reports and feature suggestions HotelManagemnt-UL_Team@gmail.com
 
-Before running tests run
+visit the project page: `https://bitbucket.org/hotelprojectul/software-methodology`
 
-php artisan config:clear
-composer dump-autoload
+REQUIREMENTS
+------------
 
-FOR RUNNING PHPUNIT:
+This project requires the following PHP framework:
 
-./vendor/bin/phpunit
-
-FOR RUNNING DUSK:
-
-php artisan dusk
+ * Laravel (https://laravel.com)
 
 
-This README would normally document whatever steps are necessary to get your application up and running.
+PREREQUISITES
+------------
+PHP >= 5.3
+The SQLite
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+INSTALLATION
+------------
+Server Requirements
+The Laravel framework has a few system requirements. Of course, all of these requirements are satisfied by the Laravel Homestead virtual machine.
+https://laravel.com/docs/5.5/installation
 
-### How do I get set up? ###
+Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer installed on your machine.
+
+Following steps are required to set up the project
+
+1. Clone the repository `https://aashish61@bitbucket.org/hotelprojectul/software-methodology.git`
+
+2. Create a file `.env` in the root folder and copy the contents of `.env.testing` and fill the necessary fields
+
+3. Generate an encryption key using `php artisan key:generate`
+
+4. Run the command `composer update` (Make sure to follow the installation instructions)
+
+5. Run `php artisan db:seed` to create the roles and permissions
+
+6. Navigate to the root folder and run `php artisan serve` to run the server
+
+7. Navigate to `http://localhost:8000`
+
+8. To run the unit test use `./vendor/bin/phpunit`
+
+9. To run the browser tests `php artisan dusk`
+
 Setup Laravel with Xampp, Composer, and Visual Studio Code
 
 This video series helps:
 https://www.youtube.com/watch?v=EU7PRmCpx-0&t=3s
 
-Clone repository:
 
-git clone <url>
+DOCUMENTATION
+------------
+The documentation for the Hotel Management can be found on link:
+https://bitbucket.org/hotelprojectul/software-methodology
 
-Navigate to directory of project
-
-Install composer from terminal : `composer install`
-
-create .env file in project directory
-
-Copy this content into .env file
-
-APP_NAME=Laravel  
-APP_ENV=local  
-APP_KEY=  
-APP_DEBUG=true  
-APP_LOG_LEVEL=debug  
-APP_URL=http://localhost  
-
-DB_CONNECTION=mysql  
-DB_HOST=127.0.0.1  
-DB_PORT=3306  
-DB_DATABASE=homestead  
-DB_USERNAME=homestead  
-DB_PASSWORD=secret  
-
-BROADCAST_DRIVER=log  
-CACHE_DRIVER=file  
-SESSION_DRIVER=file  
-QUEUE_DRIVER=sync  
-
-REDIS_HOST=127.0.0.1  
-REDIS_PASSWORD=null  
-REDIS_PORT=6379  
-
-MAIL_DRIVER=smtp  
-MAIL_HOST=smtp.mailtrap.io  
-MAIL_PORT=2525  
-MAIL_USERNAME=null  
-MAIL_PASSWORD=null  
-MAIL_ENCRYPTION=null  
-
-PUSHER_APP_ID=  
-PUSHER_APP_KEY=  
-PUSHER_APP_SECRET=  
+The PHP library documentation can be found (Do we need any other library for Mock)?!!
 
 
-generate an encryption key : `php artisan key:generate`
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
+CONTRIBUTION
+------------
 * Writing tests
 * Code review
 * Other guidelines
 
-### Who do I talk to? ###
+AUTHORS
+----
+* Ippili Aashish 
+* Brennan Guidry
+* Oyetokunbo Ipaye
+* Taghreed Alghamdi
 
-* Repo owner or admin
-* Other community or team contact
+GETTING HELP
+------------
+If you need help installing or using the library, please contact Hotel management team for support at HotelManagemnt-UL_Team@gmail.com
+
+ACKNOWLEDGMENTS:
+This project is done for coursework “Software methodology” at the University of Louisiana at Lafayette
+
+
