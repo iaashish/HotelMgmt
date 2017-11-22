@@ -63,9 +63,8 @@ class StaffRegistrationTest extends TestCase
         
         $response1 = $this->call('GET', '/manageraddstaff');
         $response2 = $this->call('POST', '/registerstaff', $newstaffinfo,['HTTP_X-Requested-With' => 'XMLHttpRequest'])
-        ->assertStatus(302);
+        ->assertStatus(302);  //unprocessable entity
         
-       //->assertSee('The first field is required');
         $newSize = Staff::count();
         //staff count should not be incremented by 1
 		$this->assertEquals($size, $newSize);
