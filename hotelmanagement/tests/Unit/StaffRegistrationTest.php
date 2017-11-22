@@ -32,6 +32,44 @@ class StaffRegistrationTest extends TestCase
 
     // }
 
+    public function testInvalidRegistratinInfo()
+    {
+        $size = Staff::count();          
+        User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
+        $credentials = [
+            'email' => 'admin1@admin1.com',
+            'password' => 'admin'
+        ];
+        $response = $this->call('POST', '/login', $credentials);
+        
+
+
+        $staff = factory(Staff::class)->make();        
+
+        $newstaffinfo = [
+            'first' => '', 
+            'last' => $staff->last,
+            'email' => $staff->email,
+            'password' => $staff->password,
+            'password_confirmation' => $staff->password,
+            'dob' => $staff->dob,
+            'dateofhire' => $staff->dateofhire,
+            'ssn'=> $staff->ssn,
+            'address'=> $staff->address,
+            'phonenumber'=> $staff->phonenumber,
+            'staff_type' => 'Receptionist'
+
+        ];
+        
+        $response1 = $this->call('GET', '/manageraddstaff');
+        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo,['HTTP_X-Requested-With' => 'XMLHttpRequest'])
+        ->assertStatus(302);
+        
+       //->assertSee('The first field is required');
+        $newSize = Staff::count();
+        //staff count should not be incremented by 1
+		$this->assertEquals($size, $newSize);
+    }
     /*
      * Test to register a staff
      *
