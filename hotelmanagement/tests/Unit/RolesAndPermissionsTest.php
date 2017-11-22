@@ -19,6 +19,25 @@ class RolesAndPermissionsTest extends TestCase
         $accountant = Mockery::mock('Staff');
         $accountant->setValue($staff_type, 'Accountant');
         $accountant->staff_type = 'Accountant';
+        
+        $staff = factory(Staff::class)->create()([       
+        
+                'staff_type' => 'Accountant', ]);
+                
+                $logincreds = [
+                    
+                    'email' => $staff->email,
+                    'password' => $staff->password,
+                    'password_confirmation' => $staff->password,
+                    'dob' => $staff->dob,
+                    'dateofhire' => $staff->dateofhire,
+                    'ssn'=> $staff->ssn,
+                    'address'=> $staff->address,
+                    'phonenumber'=> $staff->phonenumber,
+                    'staff_type' => 'Accountant'
+        
+                ];
+                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
         //test to make sure Accountant can only access their page
     }
     public function testReceptionist()

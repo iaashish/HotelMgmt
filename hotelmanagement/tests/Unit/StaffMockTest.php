@@ -26,6 +26,22 @@ class StaffMockTest extends TestCase
 
         var_dump($mock->run());
         
+        $staff = factory(Staff::class)->create();        
+        
+                $logincreds = [
+                    
+                    'email' => $staff->email,
+                    'password' => $staff->password,
+                    'password_confirmation' => $staff->password,
+                    'dob' => $staff->dob,
+                    'dateofhire' => $staff->dateofhire,
+                    'ssn'=> $staff->ssn,
+                    'address'=> $staff->address,
+                    'phonenumber'=> $staff->phonenumber,
+                    'staff_type' => 'Accountant'
+        
+                ];
+                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
         
 
     }
