@@ -24,9 +24,9 @@ class RolesAndPermissionsTest extends TestCase
         // $accountant->setValue($staff_type, 'Accountant');
         // $accountant->staff_type = 'Accountant';
         
-        $staff = factory(Staff::class)->create()([       
+        $staff = factory(Staff::class)->create([       
         
-                'staff_type' => 'Accountant', ]);
+                'staff_type' => 'Accountant',]);
                 
                 $logincreds = [
                     'email' => $staff->email,
@@ -45,7 +45,7 @@ class RolesAndPermissionsTest extends TestCase
         // $receptionist->setValue($staff_type, 'Receptionist'); 
         // $receptionist->staff_type = 'Receptionist';
 
-        $staff = factory(Staff::class)->create()([       
+        $staff = factory(Staff::class)->create([       
             
                     'staff_type' => 'Receptionist', ]);
                     
@@ -68,7 +68,7 @@ class RolesAndPermissionsTest extends TestCase
         // $maintenance->setValue($staff_type, 'Maintenance'); 
         // $receptionist->staff_type = 'Maintenance';
 
-        $staff = factory(Staff::class)->create()([       
+        $staff = factory(Staff::class)->create([       
             
                     'staff_type' => 'Maintenance', ]);
                     
