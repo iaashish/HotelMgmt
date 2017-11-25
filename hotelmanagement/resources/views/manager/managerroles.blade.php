@@ -21,16 +21,14 @@
 <style>
 
 
-
-
 input {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 12px;
-    background: white;
+    background: gray;
     text-decoration: none;
     cursor: pointer;
     text-decoration: none;
@@ -40,7 +38,7 @@ input {
 
 
 .button {
-    color: black;
+    color: white;
     font-family: 'tahoma';
     font-size: 14px; 
   font-weight: bold;
@@ -65,7 +63,13 @@ input[type="date"]::-webkit-clear-button {
 
 body {font-family: "Lato", sans-serif}
 </style>
-<body>
+ <body class="w3-light-grey">
+ <!-- Page Container -->
+ <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+     <!-- The Grid -->
+     <div class="w3-row-padding">
+ 
 
 @extends('layouts.managerheader')
 @section('content')
@@ -84,8 +88,11 @@ body {font-family: "Lato", sans-serif}
      <br>
      <br>
      <br> 
-    </p></div>
-     <div class="w3-third w3-center">
+    </p>
+
+    <div class="w3-third  w3-white">
+                <div class="w3-content" style="max-width:1000px;margin-top:46px">
+                    <div class="w3-container">
          
      
     <form method="POST" action="/setroles">
@@ -111,17 +118,52 @@ body {font-family: "Lato", sans-serif}
         
         <input type="submit" value="Assign" class=button>
     </form>
-</div>
-                <!-- End Left Column -->
-
-                <div class="w3-rest w3-center">
-
-                <input type="date" value="From" name="from" placeholder="From" required=""/>
-
-      
-     
+    <br>
+                        <br>
+                        <br>
                     </div>
-                    
+                </div>
+                <br>
+                <br>
+                <!-- End Left Column -->
+            </div>
+
+     <!-- Right Column -->
+     <div class="w3-twothird">
+     <div class="w3-container w3-card w3-white w3-margin-bottom">
+         <h2 class="w3-text-grey w3-padding-16"><i></i>Title
+         </h2>
+         <div class="w3-container">
+             <h5 class="w3-opacity"><b> Second content </b></h5>
+            
+             <p></p>
+             <hr>
+             <div class="w3-third">
+                 <section class="w3-container">
+
+                 <p> add contnent</p>
+                 </section>
+             </div>
+         </div>
+         <div class="w3-container">
+             <h5 class="w3-opacity "><b>Scontent page </b></h5>
+             <p>Click to  add new staff member, please go to staff first and register the employee, then you can
+                 assign
+                 a task.</p>
+             
+             <hr>
+             <div class="w3-container">
+             <h5 class="w3-opacity "><b>content page/b></h5>
+             <p>Click to  add new staff member, please go to staff first and register the employee, then you can
+                 assign
+                 a task.</p>
+         </div>
+     </div>
+ </div>
+
+
+
+
 @endsection
 
 </body>
