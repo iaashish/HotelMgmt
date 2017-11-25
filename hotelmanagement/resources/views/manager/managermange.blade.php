@@ -1,6 +1,41 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+ 
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Hotel Project CSCE 553</title>
+
+      <!-- Fonts -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+     
+     
+     
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.container {
+    position: relative;
+    height:100%;
+    width: 100%;
+    top: 10%;
+
+}
+
+
+</style>
+<body>
+
+
 @extends('layouts.managerheader')
 @section('content')
-    <div class="container-center  ">
+    <div class="container ">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-warning">
@@ -114,3 +149,6 @@
         </div>
     </div>
 @endsection
+
+</body>
+</html>

@@ -21,20 +21,24 @@
                         <u><h4>Personal Informationa:</h4></u>
                         <p><i class="fa fa-fw fa-envelope"></i> {{Auth::user()->email}}</p>
                         <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-                        <p>
+
+                        <hr>
                         <hr>
                         <u><h4>Bank account Information</h4></u>
                         <p><i class="fa fa-fw fa-cc-amex"></i> Amex info</p>
                         <p><i class="fa fa-fw fa-credit-card"></i> Credit Card info</p>
                         <hr>
+                        <hr>
                         <address>
                             <u> <strong> <i class="fa fa-fw fa-map-marker"></i> Address</strong></u>
                             <br>
+                            <p> <br>
                             215 Republic Ave, Apt 5306<br>
                             Lafayette, LA 70508<br>
                             P: (123) 456-7890
                         </address>
-                        <hr>
+                         <br>
+                        <br>
                         <br>
                     </div>
                 </div>
@@ -60,7 +64,7 @@
                         </div>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity "><b>Staff member not found</b></h5>
+                        <h5 class="w3-opacity "><b>Staff member not found?</b></h5>
                         <p>Click to  add new staff member, please go to staff first and register the employee, then you can
                             assign
                             a task.</p>
@@ -71,5 +75,6 @@
             </div>
         </div>
     </div>
+
     </body>
 @endsection

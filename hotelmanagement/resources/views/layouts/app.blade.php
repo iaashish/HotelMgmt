@@ -19,44 +19,29 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title> Manager login page</title>
+
+
+
+
+
 
     <!-- Styles -->
 </head>
 
+
 <body>
+
+<p>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+            <div class="container-">
+              
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                 
                         <!-- Authentication Links -->
                         @guest
-                        <li><a href="{{ route('login') }}">Login</a>
                         </li>
-                        <li><a href="{{ route('register') }}">Register</a>
                         </li>
                         @else
                         <li class="dropdown">
@@ -88,16 +73,8 @@
 
     <!-- Scripts -->
 
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a>
-        </p>
-    </footer>
+
+
 </body>
 
 </html>
