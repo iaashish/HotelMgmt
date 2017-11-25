@@ -25,39 +25,66 @@ class RolesAndPermissionsTest extends TestCase
                 'staff_type' => 'Accountant', ]);
                 
                 $logincreds = [
-                    
                     'email' => $staff->email,
                     'password' => $staff->password,
-                    'password_confirmation' => $staff->password,
-                    'dob' => $staff->dob,
-                    'dateofhire' => $staff->dateofhire,
-                    'ssn'=> $staff->ssn,
-                    'address'=> $staff->address,
-                    'phonenumber'=> $staff->phonenumber,
-                    'staff_type' => 'Accountant'
-        
                 ];
-                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
-        //test to make sure Accountant can only access their page
+
+                $response2 = $this->call('POST', '/stafflogin', $logincreds);
+                //test to make sure Accountant can only access their page
     }
     public function testReceptionist()
     {
         $receptionist = Mockery::mock('Staff');
         $receptionist->setValue($staff_type, 'Receptionist'); 
         $receptionist->staff_type = 'Receptionist';
-        //test to make sure Receptionist can only access their page
+
+        $staff = factory(Staff::class)->create()([       
+            
+                    'staff_type' => 'Receptionist', ]);
+                    
+                    $logincreds = [
+                        
+                        'email' => $staff->email,
+                        'password' => $staff->password,
+                    ];
+
+                    $response2 = $this->call('POST', '/stafflogin', $logincreds);
+                    //test to make sure Receptionist can only access their page
     }
     public function testMaintenance()
     {
         $maintenance = Mockery::mock('Staff');
         $maintenance->setValue($staff_type, 'Maintenance'); 
         $receptionist->staff_type = 'Maintenance';
+
+        $staff = factory(Staff::class)->create()([       
+            
+                    'staff_type' => 'Maintenance', ]);
+                    
+                    $logincreds = [
+                        
+                        'email' => $staff->email,
+                        'password' => $staff->password,
+                        
+            
+                    ];
+                    $response2 = $this->call('POST', '/stafflogin', $logincreds);
         //test to make sure Maintenance can only access their page
     }
     public function testManager()
     {
         $manager = Mockery::mock('User');
         
+        $manager = factory(User::class)->create();
+                    
+                    $logincreds = [
+                        
+                        'email' => $manager->email,
+                        'password' => $manager->password,
+                        
+            
+                    ];
+                    $response2 = $this->call('POST', '/managerlogin', $logincreds);
         //test to make sure Manager can only access their page
     }
 }
