@@ -35,7 +35,20 @@ class ManagerController extends Controller
     public function registerStaff(Request $request)
     {
         Debugbar::info($request);
-        $this->redirectTo = "/managerhome";
+       $this->redirectTo = "/managerhome";
+        $validatedData = $request->validate([
+            'first' => 'required',
+            'last' => 'required',
+            'email' => 'required|email',
+             'password' => 'required|min:6',
+              'dateofhire' => 'required|date',
+              'dob' => 'required|date',
+              'phonenumber' => 'required',
+              'ssn' => 'required|digits:9',
+              'address' => 'required'
+        //     // 'staff_type' => ''
+         ]);
+
         Staff::create([
             'first' => $request->first,
             'last' => $request->last,

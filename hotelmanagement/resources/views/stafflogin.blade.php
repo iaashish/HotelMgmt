@@ -1,3 +1,22 @@
+<html lang="{{ app()->getLocale() }}">
+   <head>
+   <basefont size="17">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> Staff login page</title>
+
+</head>
+
+<style>
+
+
+
+body {font-family: "Lato", sans-serif}
+</style>
+<body>
+
+
 @extends('layouts.stafflayout')
 
 @section('content')
@@ -6,9 +25,9 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="w3-display-container w3-center">
                 </div>
-                <div class=" w3-opacity w3-light-grey w3-xlarge">
+                <div class="w3 w3-xlarge">
 
-                    <h2 class="w3-wide w3-center">staff  Login Page</h2>
+                    <h1 class="w3-wide w3-center"> Staff  Login Page</h1>
                     <p class="w3-wide w3-center"><i>If you have problem in login, please contact us!</i>
                     </p>
                     <p class="w3-opacity w3-center">
@@ -77,4 +96,8 @@
         </div>
     </div>
 @endsection
+
+
+</body>
+</html>
 

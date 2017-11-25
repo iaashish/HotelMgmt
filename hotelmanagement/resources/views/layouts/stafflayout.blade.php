@@ -1,4 +1,5 @@
-<head>
+<html>
+    <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,18 +20,46 @@
     <title>{{ config('app.name', 'Staff') }}</title>
 
     <!-- Styles -->
+    <style>
+        
+        footer
+    {
+        position:absolute;
+        width:100%;
+        bottom:0px;
+    }
+        </style>
+
 </head>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+<body>
+
+<!-- header -->
+
+<div class="w3-container w3-center  w3-black w3-large">
+
+<p> <a href="/" class="w3-left w3-button w3-padding-xlarge w3-hover-blue">HOME</a>
+
+<img src="/picture/logo.png" style="float:center;width:10%" >
+
+<p>
+    
+
+</div>
+<div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center  w3-black w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
+</footer>
+</div>
+</body>
+</html>
+
 
 @yield('content')
