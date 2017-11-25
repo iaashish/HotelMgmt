@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-   <head>
+ 
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,27 +19,34 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+
+
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 <body>
 
 <!-- Navbar -->
+
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="/register" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REGISTRATION</a>
-    <a href="/booking" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKING</a>
+  
+  <div class="w3-bar w3-black w3-padding-16 w3-xlarge w3-card-4" >
+
+    <a class="w3-bar-item w3-button  w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">HOME</a>
+    <a href="/register" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue">REGISTRATION</a>
+    <a href="/booking" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue">BOOKING</a>
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">ABOUT US<i class="fa fa-caret-down"></i></button>     
+      <button class="w3-padding-large w3-button w3-hover-blue" title="More">ABOUT US<i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Brennan Guidry</a>
-        <a href="#" class="w3-bar-item w3-button">Ippili Aashish</a>
-        <a href="#" class="w3-bar-item w3-button">Oyetokunbo Ipaye</a>
-        <a href="#" class="w3-bar-item w3-button">Taghreed Alghamdi</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue">Brennan Guidry</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue">Ippili Aashish</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue">Oyetokunbo Ipaye</a>
+        <a href="#" class="w3-bar-item w3-button  w3-padding-16 w3-hover-blue">Taghreed Alghamdi</a>
       </div>
     </div>
+
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
@@ -77,8 +84,13 @@ body {font-family: "Lato", sans-serif}
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     <h2 class="w3-wide">Hotel Management System </h2>
+
     <p class="w3-opacity"><i>We make Life easier </i></p>
+    <p>
+<img src="/picture/logowhite.png" style="float:center;width:60%" >
+<p>
     <p class="w3-justify">Hotel Management System helps to coordinate administrative duties.Where manager can check in on the maintenance status of the hotel. Also, schedule meetings and events, and determining cost vs. revenue, the appropriate salary of each employee, and write reports about staff and employees .. Each staff member will have different permission and tasks to work with. .</p>
+    
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
        
@@ -113,7 +125,7 @@ body {font-family: "Lato", sans-serif}
 
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<footer class="w3-container w3-padding-64 w3-center  w3-black w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
