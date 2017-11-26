@@ -21,7 +21,7 @@ class LoginController extends Controller
 public function showLoginForm()
 {
 
-    return view('manager/managerlogin');
+    return view('manager/managerlogin')->with('title','Manager Login');
 }
 
     use AuthenticatesUsers;

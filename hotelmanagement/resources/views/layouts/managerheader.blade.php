@@ -1,9 +1,5 @@
-
-
-
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>{{$title}}</title>
     <meta charset="UTF-8">
@@ -20,7 +16,6 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images//android-icon-192x192.png')}}">
-
     <style>
         html,
         body,
@@ -36,18 +31,8 @@
     position: relative;
     min-height: 100%;
 }
-footer {
-    background-color: orange;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow:hidden;
-}
-
     </style>
-
+</head>
     <nav class="navbar navbar-trans navbar-fixed-top" role="navigation" style="position:relative">
     <div class="container">
         <div class="navbar-header">
@@ -75,7 +60,6 @@ footer {
                                                      document.getElementById('logout-form').submit();">
                         Logout
                     </a>
-
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
@@ -84,39 +68,27 @@ footer {
         </div>
     </div>
 </nav>
-
-
-
-
-</head>
-   
-<body>
 @yield('content')
-
-
-
-<!-- Scripts -->
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center  w3-black w3-xlarge">
-<i class="fa fa-facebook-official w3-hover-opacity"></i>
-<i class="fa fa-instagram w3-hover-opacity"></i>
-<i class="fa fa-snapchat w3-hover-opacity"></i>
-<i class="fa fa-pinterest-p w3-hover-opacity"></i>
-<i class="fa fa-twitter w3-hover-opacity"></i>
-<i class="fa fa-linkedin w3-hover-opacity"></i>
-<p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
+<footer class="w3-container w3-center  w3-black w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu"
+                                                                              target="_blank">www.louisiana.edu</a></p>
 </footer>
 </body>
-
-
     <script>
         $(document).on('change','#role',function(){
             $y = $(this).val();
+            $z = $(this).find('option:selected').text();
             $('#staffroles').children('option:not(:first)').remove();
             $.ajax
             ({
-                url: '{{ url('getselectvalues') }}/'+$y,
+                url: '/getselectvalues/'+$y+'/'+$z,
+
                 type: 'GET',
                 dataType: 'html',
                 success: function(data)

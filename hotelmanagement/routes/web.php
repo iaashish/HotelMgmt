@@ -46,4 +46,4 @@ Route::get('managerroles', 'manager\ManagerController@manageroles');
 Route::post('/deletestaff', 'staff\StaffEditController@destroy');
 Route::resource('tasks','TaskController');
 Route::post('/setroles', 'manager\ManagerController@assignRole');
-Route::get('getselectvalues/{val}', 'manager\ManagerController@changeDropDown');
+Route::get('getselectvalues/{val}/{vall}', 'manager\ManagerController@changeDropDown');
