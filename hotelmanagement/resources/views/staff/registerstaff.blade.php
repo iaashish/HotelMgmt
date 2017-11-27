@@ -101,8 +101,8 @@ body {font-family: "Lato", sans-serif}
                         <div class="form-group">
                             <label for="phonenumber" class="col-md-4 control-label">phone</label>
                             <div class="col-md-6">
-                                <input id="phonenumber" placeholder="Phone" type="tel" class="form-control"
-                                       name="phonenumber">
+                                <input id="phonenumber" placeholder="Phone" pattern="^\d{3}-\d{3}-\d{4}$" type="tel" class="form-control"
+                                       name="phonenumber" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -123,19 +123,19 @@ body {font-family: "Lato", sans-serif}
                                 <input id="ssn" type="number" class="form-control" name="ssn">
                             </div>
                         </div>
-                        {{--<div class="form-group">--}}
-                            {{--<label for="ssn" class="col-md-4 control-label">Staff Type</label>--}}
-                            {{--<div class="col-md-6">--}}
-                                {{--<select title="select staff " name="staff_type" id="staff_type" class="form-control">--}}
-                                    {{--<option selected="true" disabled="disabled" placeholder="Choose Staff Type">Choose--}}
-                                        {{--Staff Type--}}
-                                    {{--</option>--}}
-                                    {{--@foreach ($data as $object )--}}
-                                        {{--<option>{{$object}}</option>--}}
-                                    {{--@endforeach--}}
-                                {{--</select>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
+                        <div class="form-group">
+                            <label for="ssn" class="col-md-4 control-label">Staff Type</label>
+                            <div class="col-md-6">
+                                <select title="select staff " name="staff_type" id="staff_type" class="form-control">
+                                    <option selected="true" disabled="disabled" placeholder="Choose Staff Type">Choose
+                                        Staff Type
+                                    </option>
+                                    @foreach ($data as $object )
+                                        <option>{{$object}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button id="register" dusk="register-button" type="submit" class="btn btn-primary"><a

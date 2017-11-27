@@ -15,8 +15,8 @@ This project requires the following PHP framework:
 
 PREREQUISITES
 ------------
-PHP >= 5.3
-The SQLite
+* PHP >= 5.3
+* Any database(SqlLite, MySql, Postgres)
 
 
 INSTALLATION
@@ -80,6 +80,6 @@ GETTING HELP
 If you need help installing or using the library, please contact Hotel management team for support at HotelManagemnt-UL_Team@gmail.com
 
 ACKNOWLEDGMENTS:
-This project is done for coursework ‚ÄúSoftware methodology‚Äù at the University of Louisiana at Lafayette
+This project is done for coursework ìSoftware methodologyî at the University of Louisiana at Lafayette
 
 
