@@ -24,7 +24,7 @@ class StaffMockTest extends TestCase
         $mock2 = Mockery::mock('User');
         $mock2->shouldReceive('exists')->once()->andReturn('mocked');
 
-        var_dump($mock->run());
+        var_dump($mock->exists());
         
         $staff = factory(Staff::class)->create();        
         
@@ -41,7 +41,7 @@ class StaffMockTest extends TestCase
                     'staff_type' => 'Accountant'
         
                 ];
-                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
+                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo);
         
 
     }
