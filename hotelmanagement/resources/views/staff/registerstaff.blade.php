@@ -24,7 +24,7 @@
     position: relative;
     height:100%;
     width: 100%;
-    top: 10%;
+    bottom: 2%;
 
 }
 
