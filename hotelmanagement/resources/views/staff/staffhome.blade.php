@@ -64,6 +64,33 @@
                             </button>
                         </form>
                         @endrole
+                        @role('Accountant')
+                        <form method="POST" action="/addsalary">
+                            {{ csrf_field() }}
+                            <select title="Select Type" class="form-control" id="staffrole" name="role">
+                                <option selected="true" disabled="disabled" placeholder="Choose Staff Type">
+                                    Choose Role Type
+                                </option>
+                                @foreach ($roles as $object )
+                                    <option value="{{$object->id}}">{{$object->name}}</option>
+                                @endforeach
+                            </select>
+                            <br>
+                            <select title="Select Type" class="form-control" name="staffid" id="staffnames">
+                                <option selected="true" disabled="disabled" placeholder="Choose Staff Type">
+                                    Choose Staff
+                                </option>
+                                {{--@foreach ($staff as $object )--}} {{--
+                        <option value="{{$object->id}}">{{$object->first.' '.$object->last}}</option>--}} {{--@endforeach--}}
+                            </select>
+                            <br>
+                            <label for="salary">Salary</label>
+                            <input type="number" name="salary" id="salary">
+                            <button class="w3-button w3-dark-grey" type="submit"><i class=" w3-margin-right"></i>
+                                Add salary
+                            </button>
+                        </form>
+                        @endrole
                         <hr>
                     </div>
                 </div>
@@ -95,6 +122,36 @@
                                     <td>{{$object->id}}</td>
                                     <td>{{$object->checkin}}</td>
                                     <td>{{$object->checkout}}</td>
+                                </tr>
+                            @endforeach
+                            </thead>
+                        </table>
+                    </div>
+                    @endrole
+                    @role('Accountant')
+                    <div class="w3-container">
+                        <h2>
+                            <center>Staff Homepage</center>
+                        </h2>
+                        <p>
+                            Table to Monitor Accounts Information
+                        </p>
+                        <table class="w3-table-all  ">
+                            <thead>
+                            <tr class="w3-black">
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>SSN</th>
+                                <th>Type</th>
+                                <th>Salary</th>
+                            </tr>
+                            @foreach($accountant as $object)
+                                <tr>
+                                    <th>{{$object->id}}</th>
+                                    <td>{{$object->first.' '.$object->last}}</td>
+                                    <td>{{$object->ssn}}</td>
+                                    <td>{{$object->staff_type}}</td>
+                                    <td>{{$object->salary}}</td>
                                 </tr>
                             @endforeach
                             </thead>
