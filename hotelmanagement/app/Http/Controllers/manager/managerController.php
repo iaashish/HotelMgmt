@@ -152,8 +152,12 @@ class ManagerController extends Controller
         return $html;
     }
 
-    public function deleteRole($id)
+    public function deleteRole($id, $name)
     {
+        $user = Staff::find($id);
+        $user->removeRole($name);
 
+        Debugbar::info($name);
+        return redirect('/managerroles');
     }
 }
