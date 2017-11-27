@@ -36,16 +36,18 @@
                 <div class="w3-container w3-card w3-white w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i></i>Roles
                     </h2>
+                    <h4 class="w3-text-grey w3-padding-16"><i></i>Check list of roles for each staff member and the task they assigned to.
+                </h4>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>Receptionist</b></h5>
+                        <h5 class="w3-opacity w3-xlarge w3-text-orange "><b>Receptionist</b></h5>
                         <hr>
                         <div class="w3-third">
-                            <table class="w3-table-all  ">
+                            <table style="width:800px;" class="w3-table-all w3-centered w3-card" border="1px" >
                                 <thead>
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>X</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -55,7 +57,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit"></td>
+                                            <td><input type="submit" value="submit" class="btn btn-success"></td>
                                         </tr>
                                     </form>
                                 @endforeach
@@ -64,15 +66,15 @@
                         </div>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity "><b>Accountant</b></h5>
+                        <h5 class="w3-opacity w3-xlarge w3-text-orange "><b>Accountant</b></h5>
                         <hr>
                         <div class="w3-third">
-                            <table class="w3-table-all  ">
+                            <table style="width:800px;" class="w3-table-all w3-centered w3-card" border="1px" >
                                 <thead>
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>X</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -82,7 +84,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit"></td>
+                                            <td><input type="submit" value="submit" class="btn btn-success" ></td>
                                         </tr>
                                     </form>
                                 @endforeach
@@ -91,15 +93,15 @@
                         </div>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity "><b>Maintenance</b></h5>
+                        <h5 class="w3-opacity  w3-xlarge w3-text-orange "><b>Maintenance</b></h5>
                         <hr>
                         <div class="w3-third">
-                            <table class="w3-table-all  ">
+                            <table style="width:800px;" class="w3-table-all  w3-centered w3-card" border="1px" >
                                 <thead>
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>X</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -109,7 +111,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit"></td>
+                                            <td><input type="submit" value="submit" ></td>
                                         </tr>
                                     </form>
                                 @endforeach
