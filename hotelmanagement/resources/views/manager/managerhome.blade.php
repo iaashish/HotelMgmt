@@ -52,7 +52,7 @@
                                 class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current Staff
                     </h2>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b> All Staff haired since: </b></h5>
+                        <h5 class="w3-opacity"><b> All Staff added since: </b></h5>
                         <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2017 - <span
                                     class="w3-tag w3-teal w3-round">Current</span></h6>
                         <p></p>
