@@ -50,7 +50,20 @@ class StaffMockTest extends TestCase
     public function testLogoutMock () {
         $mock = Mockery::mock(StaffLoginController::class);
         $mock->shouldReceive('logout')->once()->andReturn('/');
-        $this->assertEquals('/',$mock->logout() ); }
+        $request = new Request(
+            [
+                'first' => 'Test',
+                'last' => 'McGee',
+                'email' => 'Test@gmail.com',
+                'dob' => '02-13-1990',
+                'dateofhire' => '11-11-2017',
+                'ssn' => '123',
+                'address' => '123',
+                'phonenumber' => '123',
+                'staff_type' => 'Receptionist'
+            ]
+            );
+        $this->assertEquals('/',$mock->logout($request) ); }
 
     public function tearDown()
     {
