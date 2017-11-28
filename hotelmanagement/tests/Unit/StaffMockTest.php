@@ -13,38 +13,35 @@ use Mockery;
 class StaffMockTest extends TestCase
 {
 
-    public function testStaffMock(){ 
+    
 
-        $mock = Mockery::mock(User::class);
-        $mock->shouldReceive([
-            'exists' => 'true',
-        ]);
-        
-            
-        $mock2 = Mockery::mock('User');
-        $mock2->shouldReceive('exists')->once()->andReturn('mocked');
+    public function testHomeMock(){ 
 
-        var_dump($mock->exists());
-        
-        $staff = factory(Staff::class)->create();        
-        
-                $logincreds = [
-                    
-                    'email' => $staff->email,
-                    'password' => $staff->password,
-                    'password_confirmation' => $staff->password,
-                    'dob' => $staff->dob,
-                    'dateofhire' => $staff->dateofhire,
-                    'ssn'=> $staff->ssn,
-                    'address'=> $staff->address,
-                    'phonenumber'=> $staff->phonenumber,
-                    'staff_type' => 'Accountant'
-        
-                ];
-                $response2 = $this->call('POST', '/registerstaff', $newstaffinfo);
-        
+        $mock = Mockery::mock(StaffLoginController::class);
+        $mock->shouldReceive('showhomepage')->once()->andReturn('staff.staffhome');
+        $this->assertEquals('staff.staffhome',$mock->showhomepage() );
 
     }
+
+    public function testLoginMock(){
+        $mock = Mockery::mock(StaffLoginController::class);
+        $mock->shouldReceive('showLoginForm')->once()->andReturn('stafflogin');
+        $this->assertEquals('stafflogin',$mock->showLoginForm() ); }
+
+    public function testEmail () {
+        $mock = Mockery::mock(StaffLoginController::class);
+        $mock->shouldReceive('email')->once()->andReturn('email');
+        $this->assertEquals('email',$mock->email() ); }
+
+    public function testLogin () {
+        $mock = Mockery::mock(StaffLoginController::class);
+        $mock->shouldReceive('login')->once()->andReturn('/staffhome');
+        $this->assertEquals('/staffhome',$mock->login() ); }
+
+        public function testLogout () {
+            $mock = Mockery::mock(StaffLoginController::class);
+            $mock->shouldReceive('logout')->once()->andReturn('/');
+            $this->assertEquals('/',$mock->logout() ); }
 
     public function tearDown()
     {
