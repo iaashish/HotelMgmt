@@ -36,6 +36,26 @@ class TasksMockTest extends TestCase
         $this->assertEquals('/managerhome',$mock->store($request) ); }
 
 
+        public function testShowMock(){ 
+            $mock = Mockery::mock(TaskController::class);
+            $mock->shouldReceive('show')->once()->andReturn('/managerhome');
+            $this->assertEquals('/managerhome',$mock->show() );
+        }
+        public function testEditMock(){
+            $mock = Mockery::mock(TaskController::class);
+            $mock->shouldReceive('edit')->once()->andReturn('/managerhome');
+            $this->assertEquals('/managerhome',$mock->edit() );
+         }
+        public function testUpdateMock(){ 
+            $mock = Mockery::mock(TaskController::class);
+            $mock->shouldReceive('update')->once()->andReturn('/managerhome');
+            $this->assertEquals('/managerhome',$mock->update() );
 
+        }
+        public function testDestroyMock(){ 
+            $mock = Mockery::mock(TaskController::class);
+            $mock->shouldReceive('destroy')->once()->andReturn('/managerhome');
+            $this->assertEquals('/managerhome',$mock->destroy() );
+        }
 
 }
