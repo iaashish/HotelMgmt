@@ -15,14 +15,12 @@ class TaskTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
 
-    /*
+
+    
     public function testTaskAssignment()
     {
+
         //create manager
         User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
         $credentials = [
@@ -34,7 +32,7 @@ class TaskTest extends TestCase
         //generate staff
         $staff = factory(Staff::class)->make();        
         $newstaffinfo = [
-            'first' => '', 
+            'first' =>  $staff->first, 
             'last' => $staff->last,
             'email' => $staff->email,
             'password' => $staff->password,
@@ -50,28 +48,44 @@ class TaskTest extends TestCase
         //got to add staff page
         $response1 = $this->call('GET', '/manageraddstaff');
         //add staff
-        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo,['HTTP_X-Requested-With' => 'XMLHttpRequest'])
-        ->assertStatus(302);  //unprocessable entity
+        $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
+        ->assertRedirect('/managerhome');
 
-        $staff2 = Staff::find($staff->email);        
+
+        
+
+        $staff2 = Staff::where('email', $staff->email)->first();
+        
+        //$staff2 = Staff::find();        
+        $this->assertEquals(count($staff2), 1);
         $setRoleParam = [
             'item_id'=> $staff2->id, 
             'role'=> 1];
         
 
-        $response2 = $this->call('POST', '/setroles', $setRoleParam,['HTTP_X-Requested-With' => 'XMLHttpRequest']);
+        $response2 = $this->call('POST', '/setroles', $setRoleParam);
 
-        $id = $staff->id;
+        $id = $staff2->id;
         $name = 'Receptionist';
         //
-        $response2 = $this->call('POST', "/deleterole/{{1}}/Receptionist", $id, $name, ['HTTP_X-Requested-With' => 'XMLHttpRequest']);
+        $response2 = $this->call('POST', "/deleterole/{{$id}}/$name");
         
+        //task parameters
+        $setTaskParam = [
+            'staffname'=> $staff2->id, 
+            'starttime'=> '15:00:00', 
+            'endtime'=> '15:30:00', 
+            'task'=>  'Main Lobby: Maintains telecommunication system',
+        ];
+
+
         //Assign task to staff
-
-
+        $response3 = $this->call('POST', "/tasks", $setTaskParam)
+        ->assertRedirect('/managerhome');
 
         //log manager out
-
+        $response4 = $this->call('POST', "/logout");
+        
 
         //log staff in
         $staffcredentials = [
@@ -79,11 +93,14 @@ class TaskTest extends TestCase
             'password' => $staff->password,
         ];
         $response = $this->call('POST', 'stafflogin', $staffcredentials);
-        //assert that the task shows up
-        $response->assertSee('Register');
+
+        $response1 = $this->call('GET','/staffhome');
         
+        //assert that the task shows up
+        //$this->assertSee('Main Lobby: Maintains telecommunication system');
+        $response1->assertSee( "Main Lobby: Maintains telecommunication system");
 
     }
-*/
+
   
 }
