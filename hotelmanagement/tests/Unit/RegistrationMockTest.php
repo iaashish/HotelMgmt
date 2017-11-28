@@ -37,7 +37,10 @@ class RegistrationMockTest extends TestCase
                 );
             $this->assertEquals('/',$mock->create($request) ); }
 
-
+            public function tearDown()
+            {
+                Mockery::close();
+            }
 
     }
 

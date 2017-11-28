@@ -32,4 +32,8 @@ class BookingMockTest extends TestCase
         $mock->shouldReceive('index')->once()->andReturn('booking');
         $this->assertEquals('booking',$mock->index() );
     }
+    public function tearDown()
+    {
+        Mockery::close();
+    }
 }

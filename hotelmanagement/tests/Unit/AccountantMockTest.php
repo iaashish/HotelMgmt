@@ -23,4 +23,8 @@ class AccountantMockTest extends TestCase
 
         $this->assertEquals('/staffhome',$mock->addSalary($request) );
     }
+    public function tearDown()
+    {
+        Mockery::close();
+    }
 }

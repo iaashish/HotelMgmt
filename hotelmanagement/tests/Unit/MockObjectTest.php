@@ -15,4 +15,8 @@ class MockObjectoTest extends TestCase  {
             ->andReturn('returnSomething');
         $mock->mockFunction();
     }
+    public function tearDown()
+    {
+        Mockery::close();
+    }
 }

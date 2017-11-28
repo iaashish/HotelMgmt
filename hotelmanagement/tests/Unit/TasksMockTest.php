@@ -57,5 +57,9 @@ class TasksMockTest extends TestCase
             $mock->shouldReceive('destroy')->once()->andReturn('/managerhome');
             $this->assertEquals('/managerhome',$mock->destroy() );
         }
+        public function tearDown()
+        {
+            Mockery::close();
+        }
 
 }
