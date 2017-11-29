@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <head>
 </head>
 <style>
@@ -36,6 +39,12 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="w3-display-container w3-center">
             </div>
+            @if ($errors->has('email'))
+                <div class="alert alert-warning alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <strong>{{ $errors->first('email') }}</strong>
+                </div>
+            @endif
             <div class="w3 w3-xlarge">
                 <br>
                 <h1 class="w3-wide w3-center">Manager Login Page</h1>
@@ -54,22 +63,16 @@
                         <label for="tab-1" class="tab" style="color: aliceblue;">Sign In</label>
                         <form class="form-horizontal" method="POST" action="{{route('login')}}">
                             {{ csrf_field() }}
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <div class="form-group">
                                 <label for="email" class="label col-md-4 control-label">E-Mail</label>
                                 <div class="col-md-8">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required > @if ($errors->has('email'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span> @endif
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required >
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <div class="form-group">
                                 <label for="password" class="label col-md-4 control-label">Password</label>
                                 <div class="col-md-8">
-                                    <input id="password" type="password" class="form-control" name="password" required> @if ($errors->has('password'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span> @endif
+                                    <input id="password" type="password" class="form-control" name="password" required>
                                 </div>
                             </div>
                             <div class="form-group">

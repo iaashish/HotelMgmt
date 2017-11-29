@@ -51,3 +51,4 @@ Route::post('addsalary','AccountantController@addSalary');
 Route::get('getstaffnames/{val}', 'staff\staffcontroller@changeDropDown');
 Route::post('/deleterole/{val}/{val2}', 'manager\ManagerController@deleterole');
 Route::get('/changetask/{val}', 'manager\ManagerController@changeTasks');
+Route::post('/editstaff/{val}', 'manager\ManagerController@editStaff');

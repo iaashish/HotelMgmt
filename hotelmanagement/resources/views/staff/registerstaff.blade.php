@@ -35,7 +35,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" name="form" method="POST" action="/registerstaff">
+                        <form class="form-horizontal" name="form" method="POST" action="/registerstaff">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('first') ? ' has-error' : '' }}">
                             <label for="first" class="col-md-4 control-label">First name</label>

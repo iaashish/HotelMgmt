@@ -160,9 +160,10 @@ class ManagerController extends Controller
         return redirect('/managerroles');
     }
 
-    public function changeTasks($role){
+    public function changeTasks($role)
+    {
         $tasklist = DB::table('tasklist')
-            ->where('role','=',$role)
+            ->where('role', '=', $role)
             ->get();
         $html = '';
         foreach ($tasklist as $package) {
@@ -170,4 +171,22 @@ class ManagerController extends Controller
         }
         return $html;
     }
+
+    public function editStaff(Request $request, $id)
+    {
+        $staff = Staff::find($id);
+        $staff->first = $request->first;
+        $staff->last = $request->last;
+        $staff->email = $request->email;
+        $staff->dob = $request->dob;
+        $staff->dateofhire = $request->dateofhire;
+        $staff->ssn = $request->ssn;
+        $staff->address = $request->address;
+        $staff->staff_type = $request->staff_type;
+        $staff->phonenumber = $request->phonenumber;
+        $staff->save();
+
+        return redirect('/managerhome');
+    }
+
 }
