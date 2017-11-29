@@ -101,7 +101,7 @@
                     @role('Receptionist')
                     <div class="w3-container">
                         <h2>
-                            <center>Staff Homepage</center>
+                            <center>Receptionist Homepage</center>
                         </h2>
                         <p>
                             Table to Monitor Guest Information
@@ -131,7 +131,7 @@
                     @role('Accountant')
                     <div class="w3-container">
                         <h2>
-                            <center>Staff Homepage</center>
+                            <center>Accountant Homepage</center>
                         </h2>
                         <p>
                             Table to Monitor Accounts Information
