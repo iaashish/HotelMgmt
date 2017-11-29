@@ -95,7 +95,7 @@ return [
             'host'      => env('TESTING_DB_HOST', '127.0.0.1'),
             'database'  => env('TESTING_DB_DATABASE', 'laravel'),
             'username'  => env('TESTING_DB_USERNAME', 'root'),
-            'password'  => env('TESTING_DB_PASSWORD', ''),
+            'password'  => env('TESTING_DB_PASSWORD', 'root'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

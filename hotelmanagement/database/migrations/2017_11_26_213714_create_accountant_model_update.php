@@ -21,8 +21,8 @@ class CreateAccountantModelUpdate extends Migration
             $table->unique('staff_id');
             $table->foreign('staff_id')
                 ->references('id')
-                ->on('staff')
-                ->onDelete('cascade');
+                ->on('staff');
+
             $table->timestamps();
         });
     }

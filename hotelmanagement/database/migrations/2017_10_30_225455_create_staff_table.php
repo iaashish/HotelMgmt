@@ -13,6 +13,7 @@ class CreateStaffTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('accountant');
         Schema::dropIfExists('staff');
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
@@ -24,7 +25,7 @@ class CreateStaffTable extends Migration
             $table->integer('ssn');
             $table->string('address', 100);	
             $table->string('phonenumber');	
-       //     $table->integer('stafftype_id');
+            $table->string('password');
             $table->enum('staff_type', ['manager', 'accountant','maintenance','receptionist']);		
             $table->timestamps();
 
@@ -38,7 +39,7 @@ class CreateStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff');
+//        Schema::dropIfExists('staff');
     }
 
 }

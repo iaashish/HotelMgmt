@@ -156,8 +156,18 @@ class ManagerController extends Controller
     {
         $user = Staff::find($id);
         $user->removeRole($name);
-
         Debugbar::info($name);
         return redirect('/managerroles');
+    }
+
+    public function changeTasks($role){
+        $tasklist = DB::table('tasklist')
+            ->where('role','=',$role)
+            ->get();
+        $html = '';
+        foreach ($tasklist as $package) {
+            $html .= '<option> ' . $package->task . ' </option>';
+        }
+        return $html;
     }
 }

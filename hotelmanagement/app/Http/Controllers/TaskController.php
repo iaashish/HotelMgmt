@@ -43,7 +43,7 @@ class TaskController extends Controller
         $task->endtime = $request->endtime;
         $task->task = $request->task;
         $task->save();
-        return redirect('/managerhome');
+        return redirect('/managermange');
     }
 
     /**

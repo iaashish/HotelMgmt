@@ -1,5 +1,5 @@
 <html>
-    <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,48 +18,36 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images//android-icon-192x192.png')}}">
     <title>{{ config('app.name', 'Staff') }}</title>
-
-    <!-- Styles -->
-    <style>
-        
-        footer
-    {
-        position:absolute;
-        width:100%;
-        bottom:0px;
-    }
-        </style>
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images//android-icon-192x192.png')}}">
 
 </head>
-
 <body>
-
-<!-- header -->
-
-<div class="w3-container w3-center  w3-black w3-large">
-
-<p> <a href="/" class="w3-left w3-button w3-padding-xlarge w3-hover-blue">HOME</a>
-
-<img src="/picture/logo.png" style="float:center;width:10%" >
-
-<p>
-    
-
-</div>
+<nav class="w3-black navbar navbar-inverse ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/" style="height: 80px;">
+                <img class="w3-left" src="/picture/logo.png" style="height: 10%;
+                                                                    padding: 15px;
+                                                                    width: 10%;">
+            </a>
+        </div>
+    </div>
+</nav>
 <div>
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center  w3-black w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu" target="_blank">www.louisiana.edu</a></p>
-</footer>
+    @yield('content')
+    <footer class="w3-container w3-center  w3-black w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">© Copyright 2017 Hotel Management System team @UL <a href="https://www.louisiana.edu"
+                                                                                  target="_blank">www.louisiana.edu</a>
+        </p>
+    </footer>
 </div>
 </body>
 </html>
 
 
-@yield('content')

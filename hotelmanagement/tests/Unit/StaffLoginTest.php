@@ -47,14 +47,16 @@ class StaffLoginTest extends TestCase
      */
     public function testNavigateToStaffHomeAfterLogin()
     {
-        $user = factory(Staff::class, 1)->create(['email' => 'software2@gmail.com']);
-        $response = $this->call('POST', '/stafflogin', [
-            'email' => 'software2@gmail.com',
+        factory(Staff::class)->create();
+        $staff = Staff::first();
+        $staffcredentials = [
+            'email' => $staff->email,
             'password' => '123456',
-        ]);
-        $response->assertSee('>Redirecting to http://localhost:8000');
-        $response = $this->call('get', '/staffhome');
-        $response->assertSee('Staff Homepage');
+        ];
+        $response = $this->call('POST', 'stafflogin', $staffcredentials);
+        $response->assertStatus(302);
+        $response = $this->call('GET', '/staffhome');
+        $response->assertSee($staff->email);
 
     }
 
@@ -66,11 +68,15 @@ class StaffLoginTest extends TestCase
      */
     public function testRedirectsBackToFormIfLoginFails()
     {
-        $user = factory(Staff::class, 1)->create(['email' => 'software@gmail.com']);
-        $requestCredentials = ['email' => 'software@gmail.com', 'password' => '12345655'];
-        $response = $this->call('POST', '/stafflogin', $requestCredentials);
-        $response->assertSee('>Redirecting to http://localhost:8000');
+        factory(Staff::class)->create();
+//        $staff = Staff::first();
+        $staffcredentials = [
+            'email' => 'invalid@invalid.com',
+            'password' => '123456',
+        ];
+        $response = $this->call('POST', '/stafflogin', $staffcredentials);
+        $response->assertStatus(302);
         $response = $this->call('get', 'staffhome');
-        $response->assertSee('Redirecting to http://localhost:8000/stafflogin');
+        $response->assertSee('Redirecting to http://localhost:8000');
     }
 }

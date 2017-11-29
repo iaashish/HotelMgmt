@@ -1,39 +1,34 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
- 
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Hotel Project CSCE 553</title>
 
-      <!-- Fonts -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-      <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-     
-     
-     
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Project CSCE 553</title>
+<!-- Fonts -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    .container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        bottom: 2%;
+    }
 
-.container {
-    position: relative;
-    height:100%;
-    width: 100%;
-    bottom: 2%;
+    body {
+        font-family: "Lato", sans-serif
+    }
 
-}
-
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
+    .mySlides {
+        display: none
+    }
 </style>
 <body>
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -101,7 +96,8 @@ body {font-family: "Lato", sans-serif}
                         <div class="form-group">
                             <label for="phonenumber" class="col-md-4 control-label">phone</label>
                             <div class="col-md-6">
-                                <input id="phonenumber" placeholder="Phone" pattern="^\d{3}-\d{3}-\d{4}$" type="tel" class="form-control"
+                                <input id="phonenumber" placeholder="Phone" pattern="^\d{3}-\d{3}-\d{4}$" type="tel"
+                                       class="form-control"
                                        name="phonenumber" required>
                             </div>
                         </div>

@@ -1,56 +1,43 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
- 
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Hotel Project CSCE 553</title>
-
-      <!-- Fonts -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-      <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-     
-     
-     
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Project CSCE 553</title>
+<!-- Fonts -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-.container {
-    position: relative;
-    height:100%;
-    width: 100%;
-    top: 10%;
-
-}
-
-
+    .container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 10%;
+    }
 </style>
 <body>
-
-
 @extends('layouts.managerheader')
 @section('content')
     <div class="container ">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-warning">
-                    <div class="panel-heading">Staff List</div>
+                    <div class="panel-heading">Assign Task</div>
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST" action="/tasks">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="address" class="col-md-4 control-label">Staff Type</label>
                                 <div class="col-md-6">
-                                    <select title="Select Type" class="form-control" name="item_id">
+                                    <select title="Select Type" class="form-control" name="item_id" id="role">
                                         <option selected="true" disabled="disabled" placeholder="Choose Staff Type">
                                             Choose Staff Type
                                         </option>
-                                        @foreach ($data as $object )
+                                        @foreach ($data as $object )`
                                             <option>{{$object}}</option>
                                         @endforeach
                                     </select>
@@ -59,12 +46,12 @@
                             <div class="form-group">
                                 <label for="address" class="col-md-4 control-label">Staff name</label>
                                 <div class="col-md-6">
-                                    <select title="Staff Name" class="form-control" name="staffname">
-                                        <option selected="true" disabled="disabled">Select Staff</option>
-                                        @foreach($staffnames as $object)
+                                    <select title="Staff Name" class="form-control" name="staffname" id="staffroles">
+                                        <option selected="true" disabled="disabled" placeholder="Choose Staff Type">Select Staff</option>
+                                        {{--@foreach($staffnames as $object)--}}
 
-                                            <option value="{{$object->id}}">{{$object->first." ".$object->last}}</option>
-                                        @endforeach
+                                            {{--<option value="{{$object->id}}">{{$object->first." ".$object->last}}</option>--}}
+                                        {{--@endforeach--}}
                                     </select>
                                 </div>
                             </div>
@@ -92,7 +79,8 @@
 
                                 <div class="col-md-6">
                                     <select id="task" title="select" class="form-control" name="task">
-                                        <option> Main Lobby: Reservations & Direct</option>
+                                        <option selected="true" disabled="disabled" placeholder="Choose Staff Type">Select Task</option>
+                                        {{--<option> Main Lobby: Reservations & Direct</option>
                                         <option> Main Lobby: Maintains telecommunication system
                                         </option>
                                         <option> Main Office: Assists in distribution of office
@@ -131,7 +119,7 @@
                                         </option>
                                         <option> Main Lobby: General Repairs(Vending machines/
                                             Wi-Fi)
-                                        </option>
+                                        </option>--}}
                                     </select>
                                 </div>
                             </div>

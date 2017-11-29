@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet"/>
-    <script
-            src="https://code.jquery.com/jquery-2.2.4.js"
-            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-            crossorigin="anonymous"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="{{asset('css/managerstyle.css')}}"/>
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images//android-icon-192x192.png')}}">
     <style>
@@ -32,6 +32,7 @@
     min-height: 100%;
 }
     </style>
+
 </head>
     <nav class="navbar navbar-trans navbar-fixed-top" role="navigation" style="position:relative">
     <div class="container">
@@ -85,10 +86,10 @@
             $y = $(this).val();
             $z = $(this).find('option:selected').text();
             $('#staffroles').children('option:not(:first)').remove();
+            $('#task').children('option:not(:first)').remove();
             $.ajax
             ({
                 url: '/getselectvalues/'+$y+'/'+$z,
-
                 type: 'GET',
                 dataType: 'html',
                 success: function(data)
@@ -96,13 +97,17 @@
                 $("#staffroles").append(data);
                 }
             });
+            $.ajax
+            ({
+                url: '/changetask/'+$z,
+                type: 'GET',
+                dataType: 'html',
+                success: function(data)
+                {
+                    $("#task").append(data);
+                }
+            });
         });
-//
-//        $('#role').change(function(e) {
-//            e.preventDefault();
-//            console.log("aa");
-//            alert($y);
-//        });
     </script>
 
 </html>

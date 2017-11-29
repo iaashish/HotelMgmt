@@ -1,24 +1,4 @@
-<html lang="{{ app()->getLocale() }}">
-   <head>
-   <basefont size="17">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title> Staff login page</title>
-
-</head>
-
-<style>
-
-
-
-body {font-family: "Lato", sans-serif}
-</style>
-<body>
-
-
 @extends('layouts.stafflayout')
-
 @section('content')
     <div class="container">
         <div class="row">
@@ -96,8 +76,3 @@ body {font-family: "Lato", sans-serif}
         </div>
     </div>
 @endsection
-
-
-</body>
-</html>
-
