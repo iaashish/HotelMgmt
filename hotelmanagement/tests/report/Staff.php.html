@@ -60,6 +60,7 @@
       <td class="danger small"><div align="right">0&nbsp;/&nbsp;4</div></td>
       <td class="danger small"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></td>
       <td class="danger big">       <div class="progress">
+<<<<<<< HEAD
          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="100" style="width: 0.00%">
            <span class="sr-only">0.00% covered (danger)</span>
          </div>
@@ -67,6 +68,15 @@
 </td>
       <td class="danger small"><div align="right">0.00%</div></td>
       <td class="danger small"><div align="right">0&nbsp;/&nbsp;13</div></td>
+=======
+         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="38.46" aria-valuemin="0" aria-valuemax="100" style="width: 38.46%">
+           <span class="sr-only">38.46% covered (danger)</span>
+         </div>
+       </div>
+</td>
+      <td class="danger small"><div align="right">38.46%</div></td>
+      <td class="danger small"><div align="right">5&nbsp;/&nbsp;13</div></td>
+>>>>>>> 56099349d63ac27818dc5a79842c91de86672789
      </tr>
 
      <tr>
@@ -87,6 +97,7 @@
 </td>
       <td class="danger small"><div align="right">0.00%</div></td>
       <td class="danger small"><div align="right">0&nbsp;/&nbsp;4</div></td>
+<<<<<<< HEAD
       <td class="danger small">42</td>
       <td class="danger big">       <div class="progress">
          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="100" style="width: 0.00%">
@@ -96,6 +107,17 @@
 </td>
       <td class="danger small"><div align="right">0.00%</div></td>
       <td class="danger small"><div align="right">0&nbsp;/&nbsp;13</div></td>
+=======
+      <td class="danger small">14.39</td>
+      <td class="danger big">       <div class="progress">
+         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="38.46" aria-valuemin="0" aria-valuemax="100" style="width: 38.46%">
+           <span class="sr-only">38.46% covered (danger)</span>
+         </div>
+       </div>
+</td>
+      <td class="danger small"><div align="right">38.46%</div></td>
+      <td class="danger small"><div align="right">5&nbsp;/&nbsp;13</div></td>
+>>>>>>> 56099349d63ac27818dc5a79842c91de86672789
      </tr>
 
      <tr>
@@ -242,6 +264,7 @@
      <tr><td><div align="right"><a name="53"></a><a href="#53">53</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">public</span><span class="default">&nbsp;</span><span class="keyword">function</span><span class="default">&nbsp;</span><span class="default">scopestafftype</span><span class="keyword">(</span><span class="keyword">)</span></td></tr>
      <tr><td><div align="right"><a name="54"></a><a href="#54">54</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">{</span></td></tr>
      <tr><td><div align="right"><a name="55"></a><a href="#55">55</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//&nbsp;Create&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;model&nbsp;to&nbsp;be&nbsp;able&nbsp;to&nbsp;get&nbsp;the&nbsp;table&nbsp;name</span></td></tr>
+<<<<<<< HEAD
      <tr class="danger"><td><div align="right"><a name="56"></a><a href="#56">56</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$instance</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="keyword">new</span><span class="default">&nbsp;</span><span class="keyword">static</span><span class="keyword">;</span><span class="default">&nbsp;</span><span class="comment">//&nbsp;create&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;model&nbsp;to&nbsp;be&nbsp;able&nbsp;to&nbsp;get&nbsp;the&nbsp;table&nbsp;name</span></td></tr>
      <tr class="danger"><td><div align="right"><a name="57"></a><a href="#57">57</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$type</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="default">DB</span><span class="default">::</span><span class="default">table</span><span class="keyword">(</span><span class="default">'roles'</span><span class="keyword">)</span><span class="default">-&gt;</span><span class="default">select</span><span class="keyword">(</span><span class="default">'name'</span><span class="keyword">)</span><span class="default">-&gt;</span><span class="default">get</span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">;</span></td></tr>
      <tr><td><div align="right"><a name="58"></a><a href="#58">58</a></div></td><td class="codeLine"></td></tr>
@@ -250,6 +273,16 @@
      <tr class="danger"><td><div align="right"><a name="61"></a><a href="#61">61</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$enum</span><span class="keyword">[</span><span class="keyword">]</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="default">$name</span><span class="default">-&gt;</span><span class="default">name</span><span class="keyword">;</span></td></tr>
      <tr><td><div align="right"><a name="62"></a><a href="#62">62</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">}</span></td></tr>
      <tr class="danger"><td><div align="right"><a name="63"></a><a href="#63">63</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span class="default">&nbsp;</span><span class="default">$enum</span><span class="keyword">;</span></td></tr>
+=======
+     <tr class="covered-by-large-tests popin" data-title="1 test covers line 56" data-content="&lt;ul&gt;&lt;li class=&quot;covered-by-large-tests&quot;&gt;Tests\Unit\TaskTest::testTaskAssignment&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="56"></a><a href="#56">56</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$instance</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="keyword">new</span><span class="default">&nbsp;</span><span class="keyword">static</span><span class="keyword">;</span><span class="default">&nbsp;</span><span class="comment">//&nbsp;create&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;model&nbsp;to&nbsp;be&nbsp;able&nbsp;to&nbsp;get&nbsp;the&nbsp;table&nbsp;name</span></td></tr>
+     <tr class="covered-by-large-tests popin" data-title="1 test covers line 57" data-content="&lt;ul&gt;&lt;li class=&quot;covered-by-large-tests&quot;&gt;Tests\Unit\TaskTest::testTaskAssignment&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="57"></a><a href="#57">57</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$type</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="default">DB</span><span class="default">::</span><span class="default">table</span><span class="keyword">(</span><span class="default">'roles'</span><span class="keyword">)</span><span class="default">-&gt;</span><span class="default">select</span><span class="keyword">(</span><span class="default">'name'</span><span class="keyword">)</span><span class="default">-&gt;</span><span class="default">get</span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">;</span></td></tr>
+     <tr><td><div align="right"><a name="58"></a><a href="#58">58</a></div></td><td class="codeLine"></td></tr>
+     <tr class="covered-by-large-tests popin" data-title="1 test covers line 59" data-content="&lt;ul&gt;&lt;li class=&quot;covered-by-large-tests&quot;&gt;Tests\Unit\TaskTest::testTaskAssignment&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="59"></a><a href="#59">59</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$enum</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="keyword">array</span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">;</span></td></tr>
+     <tr class="covered-by-large-tests popin" data-title="1 test covers line 60" data-content="&lt;ul&gt;&lt;li class=&quot;covered-by-large-tests&quot;&gt;Tests\Unit\TaskTest::testTaskAssignment&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="60"></a><a href="#60">60</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">foreach</span><span class="default">&nbsp;</span><span class="keyword">(</span><span class="default">$type</span><span class="default">&nbsp;</span><span class="keyword">as</span><span class="default">&nbsp;</span><span class="default">$name</span><span class="keyword">)</span><span class="default">&nbsp;</span><span class="keyword">{</span></td></tr>
+     <tr class="danger"><td><div align="right"><a name="61"></a><a href="#61">61</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="default">$enum</span><span class="keyword">[</span><span class="keyword">]</span><span class="default">&nbsp;</span><span class="keyword">=</span><span class="default">&nbsp;</span><span class="default">$name</span><span class="default">-&gt;</span><span class="default">name</span><span class="keyword">;</span></td></tr>
+     <tr><td><div align="right"><a name="62"></a><a href="#62">62</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">}</span></td></tr>
+     <tr class="covered-by-large-tests popin" data-title="1 test covers line 63" data-content="&lt;ul&gt;&lt;li class=&quot;covered-by-large-tests&quot;&gt;Tests\Unit\TaskTest::testTaskAssignment&lt;/li&gt;&lt;/ul&gt;" data-placement="bottom" data-html="true"><td><div align="right"><a name="63"></a><a href="#63">63</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span class="default">&nbsp;</span><span class="default">$enum</span><span class="keyword">;</span></td></tr>
+>>>>>>> 56099349d63ac27818dc5a79842c91de86672789
      <tr class="warning"><td><div align="right"><a name="64"></a><a href="#64">64</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">}</span></td></tr>
      <tr><td><div align="right"><a name="65"></a><a href="#65">65</a></div></td><td class="codeLine"></td></tr>
      <tr><td><div align="right"><a name="66"></a><a href="#66">66</a></div></td><td class="codeLine"><span class="default">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">public</span><span class="default">&nbsp;</span><span class="keyword">function</span><span class="default">&nbsp;</span><span class="default">scopestaffcolumns</span><span class="keyword">(</span><span class="keyword">)</span></td></tr>
@@ -286,7 +319,11 @@
      <span class="warning"><strong>Dead Code</strong></span>
     </p>
     <p>
+<<<<<<< HEAD
      <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.2.3</a> using <a href="https://secure.php.net/" target="_top">PHP 7.0.24</a> with <a href="https://xdebug.org/">Xdebug 2.5.4</a> and <a href="https://phpunit.de/">PHPUnit 6.4.4</a> at Tue Nov 28 23:19:26 UTC 2017.</small>
+=======
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.2.3</a> using <a href="https://secure.php.net/" target="_top">PHP 7.0.10</a> with <a href="https://xdebug.org/">Xdebug 2.5.4</a> and <a href="https://phpunit.de/">PHPUnit 6.4.4</a> at Tue Nov 28 22:16:28 UTC 2017.</small>
+>>>>>>> 56099349d63ac27818dc5a79842c91de86672789
     </p>
     <a title="Back to the top" id="toplink" href="#"><span class="glyphicon glyphicon-arrow-up"></span></a>
    </footer>

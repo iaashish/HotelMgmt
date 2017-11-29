@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccountantModelUpdate extends Migration
+class CreateTaskListForTasks extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,15 @@ class CreateAccountantModelUpdate extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('accountant');
-        Schema::create('accountant', function (Blueprint $table) {
+        Schema::dropIfExists('tasklist');
+        Schema::create('tasklist', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('staff_id')->unsigned();
-            $table->unique('staff_id');
-            $table->foreign('staff_id')
-                ->references('id')
-                ->on('staff');
+            $table->string('role');
+            $table->string('task');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

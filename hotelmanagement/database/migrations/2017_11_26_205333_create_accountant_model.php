@@ -19,10 +19,7 @@ class CreateAccountantModel extends Migration
             $table->increments('id');
             $table->integer('staff_id')->unsigned();
             $table->unique('staff_id');
-            $table->foreign('staff_id')
-                ->references('id')
-                ->on('staff')
-                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
