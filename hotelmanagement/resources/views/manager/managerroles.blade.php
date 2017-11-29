@@ -18,7 +18,7 @@
                             <br>
                             <select title="Select Type" class="form-control" name="item_id" id="staffroles">
                                 <option selected="true" disabled="disabled" placeholder="Choose Staff Type">
-                                    Choose Staff Type
+                                    Choose Staff
                                 </option>
                                 {{--@foreach ($staff as $object )--}} {{--
                         <option value="{{$object->id}}">{{$object->first.' '.$object->last}}</option>--}} {{--@endforeach--}}

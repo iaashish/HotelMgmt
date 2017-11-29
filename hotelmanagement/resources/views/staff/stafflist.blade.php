@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h4>Lis of hotel staff with their contact information.</h4>
+            <h4>List of hotel staff with their contact information.</h4>
             <div class="table-responsive">
                 <table id="mytable" class="table table-bordred table-striped">
                     <thead>
@@ -28,7 +28,7 @@
                             </td>
                             <td>{{$object->id}}</td>
                             <td>{{$object->staff_type}}</td>
-                            <td>{{$object->first.$object->last}}</td>
+                            <td>{{$object->first.' '.$object->last}}</td>
                             <td>{{$object->email}}</td>
                             <td>{{$object->dateofhire}}</td>
                             <td>

@@ -20,10 +20,6 @@ class CreateTaskTable extends Migration
             $table->timestamps();
             $table->integer('staff_id')->unsigned();
             $table->string('staffname');
-            $table->foreign('staff_id')
-                ->references('id')
-                ->on('staff')
-                ->onDelete('cascade');
             $table->time('starttime');
             $table->time('endtime');
             $table->string('task');
