@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Session;
 
 class ManagerLoginTest extends TestCase
 {
+    use DatabaseTransactions;
 
     /**
      * Wrong authentication test
@@ -22,13 +23,13 @@ class ManagerLoginTest extends TestCase
      */
     public function testInvalidLogin()
     {
-        User::Create(['name' => 'hello user', 'email' => 'admin@admin.com', 'password' => 'admin']);
+        User::Create(['name' => 'hello user', 'email' => 'admin1@admin1.com', 'password' => bcrypt('admin')]);
         $credentials = [
-            'email' => 'admin@admin.com',
-            'password' => 'admin123'
+            'email' => 'admin1@admin1.com',
+            'password' => 'admin'
         ];
         $response = $this->post('/login', $credentials);
-        $response->assertStatus(302);
+       $response->assertStatus(302);
     }
 
     /*
@@ -46,9 +47,9 @@ class ManagerLoginTest extends TestCase
             'email' => 'admin1@admin1.com',
             'password' => 'admin'
         ];
+        //sign manager in
         $response = $this->call('POST', '/login', $credentials);
-        $response->assertStatus(302);
-        $response1 = $this->call('GET', '/managerhome');
+        $response1 = $this->call('GET', '/home');
         $response1->assertSee('Hotel Management System');
     }
 }

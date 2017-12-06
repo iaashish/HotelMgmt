@@ -13,14 +13,22 @@ class UpdatePasswordField extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('staff', function($table) {
-        $table->dropColumn('password');
-    });
+//        if (Schema::hasColumn('staff', 'password'))
+//        {
+//            Schema::table('staff', function (Blueprint $table)
+//            {
+//                $table->dropColumn('password');
+//            });
+//        }
+//        if (Schema::hasColumn('staff', 'password'))
+//        {
+//            Schema::table('staff', function (Blueprint $table)
+//            {
+//                $table->string('password');
+//            });
+//        }
 
-    Schema::table('staff', function($table) {
-        $table->string('password');
-    });
+
     }
 
     /**

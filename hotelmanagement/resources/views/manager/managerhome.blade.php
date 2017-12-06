@@ -18,7 +18,7 @@
                     </div>
                     <div class="w3-container">
                         <hr>
-                        <u><h4>Personal Informationa:</h4></u>
+                        <u><h4>Personal Information:</h4></u>
                         <p><i class="fa fa-fw fa-envelope"></i> {{Auth::user()->email}}</p>
                         <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
 

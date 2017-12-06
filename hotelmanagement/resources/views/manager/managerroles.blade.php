@@ -57,7 +57,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit" class="btn btn-success"></td>
+                                            <td><input type="submit" value="Remove" class="btn btn-success"></td>
                                         </tr>
                                     </form>
                                 @endforeach
@@ -74,7 +74,11 @@
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
+<<<<<<< HEAD
                                     <th>Delete Permission</th>
+=======
+                                    <th>Remove</th>
+>>>>>>> master
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -84,7 +88,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit" class="btn btn-success" ></td>
+                                            <td><input type="submit" value="Remove" class="btn btn-success" ></td>
                                         </tr>
                                     </form>
                                 @endforeach
@@ -101,7 +105,11 @@
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
+<<<<<<< HEAD
                                     <th>Delete Permission</th>
+=======
+                                    <th>Remove</th>
+>>>>>>> master
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -111,7 +119,7 @@
                                         <tr>
                                             <td>{{$object->first}}</td>
                                             <td>{{$object->last}}</td>
-                                            <td><input type="submit" value="submit" ></td>
+                                            <td><input type="submit" value="Remove" class="btn btn-success"></td>
                                         </tr>
                                     </form>
                                 @endforeach
@@ -126,4 +134,3 @@
         </div>
     </div>
 @endsection
-

@@ -16,7 +16,7 @@ class AccountantController extends Controller
 
     public function addSalary(Request $request){
 
-        Debugbar::info("Hello");
+        Debugbar::info("Add Salary");
         Accountant::create([
             'staff_id' => $request->staffid,
             'salary' => $request->salary,

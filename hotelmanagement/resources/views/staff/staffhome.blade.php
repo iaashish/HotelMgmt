@@ -32,6 +32,7 @@
                             <br>
                             {{Auth::user()->address}}
                         </address>
+                        <hr>
                         @role('Receptionist')
                         <form method="POST" action="/registerbooking">
                             {{ csrf_field() }}
@@ -65,6 +66,7 @@
                         </form>
                         @endrole
                         @role('Accountant')
+                        <h3>Assign Salary</h3>
                         <form method="POST" action="/addsalary">
                             {{ csrf_field() }}
                             <select title="Select Type" class="form-control" id="staffrole" name="role">
@@ -85,7 +87,9 @@
                             </select>
                             <br>
                             <label for="salary">Salary</label>
-                            <input type="number" name="salary" id="salary">
+                            <input type="number" class="form-control" name="salary" id="salary">
+                            <br>
+                            <br>
                             <button class="w3-button w3-dark-grey" type="submit"><i class=" w3-margin-right"></i>
                                 Add salary
                             </button>

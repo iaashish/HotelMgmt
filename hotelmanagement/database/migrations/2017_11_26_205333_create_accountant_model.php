@@ -31,6 +31,6 @@ class CreateAccountantModel extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('accountant');
     }
 }

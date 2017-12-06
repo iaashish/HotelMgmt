@@ -28,18 +28,10 @@ class RolesAndPermissionsTest extends TestCase
      *
      * @return void
      */
-    /** @test */
-           /* 
 
     public function testAccountant()
     {
-        // $accountant = Mockery::mock('Staff');
-        // $accountant->setValue($staff_type, 'Accountant');
-        // $accountant->staff_type = 'Accountant';
-
-
-
-        $staff = factory(Staff::class,1)->create([       
+        $staff = factory(Staff::class,1)->create([
                 'email' => 'test@gmail.com',
                 'password' => '123456',
                 'staff_type' => 'Accountant',]);

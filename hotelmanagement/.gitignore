@@ -14,6 +14,7 @@ phpunit.xml
 .idea/workspace.xml
 workspace.xml
 .env.testing
+/tests/report/*
+/config/database.php
 /tests/report
-/tests/report/*.html
 
