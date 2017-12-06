@@ -47,7 +47,7 @@
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Remove</th>
+                                    <th>Delete Permission</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -74,7 +74,11 @@
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
+<<<<<<< HEAD
+                                    <th>Delete Permission</th>
+=======
                                     <th>Remove</th>
+>>>>>>> master
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -101,7 +105,11 @@
                                 <tr class="w3-black">
                                     <th>First Name</th>
                                     <th>Last Name</th>
+<<<<<<< HEAD
+                                    <th>Delete Permission</th>
+=======
                                     <th>Remove</th>
+>>>>>>> master
                                 </tr>
                                 </thead>
                                 <tbody>

@@ -45,7 +45,7 @@ class TaskTest extends TestCase
             'staff_type' => 'Receptionist'
 
         ];
-        //got to add staff page
+        //go to add staff page
         $response1 = $this->call('GET', '/manageraddstaff');
         //add staff
         $response2 = $this->call('POST', '/registerstaff', $newstaffinfo)
@@ -53,15 +53,15 @@ class TaskTest extends TestCase
 
 
         
-
+        //find staff in database so you can get generated id
         $staff2 = Staff::where('email', $staff->email)->first();
         
         //$staff2 = Staff::find();        
-        $this->assertEquals(count($staff2), 1);
         $setRoleParam = [
             'item_id'=> $staff2->id, 
             'role'=> 1];
         
+        /*
 
         $response2 = $this->call('POST', '/setroles', $setRoleParam);
 
@@ -69,13 +69,13 @@ class TaskTest extends TestCase
         $name = 'Receptionist';
         //
         $response2 = $this->call('POST', "/deleterole/{{$id}}/$name");
-        
+        */
         //task parameters
         $setTaskParam = [
             'staffname'=> $staff2->id, 
             'starttime'=> '15:00:00', 
             'endtime'=> '15:30:00', 
-            'task'=>  'Main Lobby: Maintains telecommunication system',
+            'task'=>  'Main Office: Review and approve all reconciliation',
         ];
 
 
@@ -97,8 +97,7 @@ class TaskTest extends TestCase
         $response1 = $this->call('GET','/staffhome');
         
         //assert that the task shows up
-        //$this->assertSee('Main Lobby: Maintains telecommunication system');
-        $response1->assertSee( "Main Lobby: Maintains telecommunication system");
+        $response1->assertSee( "Main Office: Review and approve all reconciliation");
 
     }
 

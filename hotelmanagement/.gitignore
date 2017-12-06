@@ -16,4 +16,5 @@ workspace.xml
 .env.testing
 /tests/report/*
 /config/database.php
+/tests/report
 
